@@ -39,6 +39,7 @@
             this.columnAnnee = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.lblIdClientValide = new System.Windows.Forms.Label();
             this.txtIdClient = new System.Windows.Forms.TextBox();
+            this.lblListeLivresDispo = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblEmprunt
@@ -59,7 +60,7 @@
             this.columnAuteur,
             this.columnAnnee});
             this.listViewEmprunt.HideSelection = false;
-            this.listViewEmprunt.Location = new System.Drawing.Point(100, 181);
+            this.listViewEmprunt.Location = new System.Drawing.Point(100, 217);
             this.listViewEmprunt.Name = "listViewEmprunt";
             this.listViewEmprunt.Size = new System.Drawing.Size(576, 207);
             this.listViewEmprunt.TabIndex = 1;
@@ -131,11 +132,22 @@
             this.txtIdClient.Size = new System.Drawing.Size(182, 20);
             this.txtIdClient.TabIndex = 6;
             // 
+            // lblListeLivresDispo
+            // 
+            this.lblListeLivresDispo.AutoSize = true;
+            this.lblListeLivresDispo.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblListeLivresDispo.Location = new System.Drawing.Point(222, 185);
+            this.lblListeLivresDispo.Name = "lblListeLivresDispo";
+            this.lblListeLivresDispo.Size = new System.Drawing.Size(339, 29);
+            this.lblListeLivresDispo.TabIndex = 7;
+            this.lblListeLivresDispo.Text = "Liste des livres disponibles ";
+            // 
             // EmpruntLivre
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.lblListeLivresDispo);
             this.Controls.Add(this.txtIdClient);
             this.Controls.Add(this.lblIdClientValide);
             this.Controls.Add(this.btnEmprunter);
@@ -164,5 +176,6 @@
         private System.Windows.Forms.Button btnEmprunter;
         private System.Windows.Forms.Label lblIdClientValide;
         private System.Windows.Forms.TextBox txtIdClient;
+        private System.Windows.Forms.Label lblListeLivresDispo;
     }
 }

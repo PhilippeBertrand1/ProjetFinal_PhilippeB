@@ -16,5 +16,40 @@ namespace ProjetFinal_PhilippeB
         {
             InitializeComponent();
         }
+
+        private void btnEmprunter_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtIdClient_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblIdClientValide_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblListeLivresDispo_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtIdEmprunt_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblEmpruntLivre_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void listViewEmprunt_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
