@@ -33,13 +33,13 @@
             this.lblTitre = new System.Windows.Forms.Label();
             this.lblAuteur = new System.Windows.Forms.Label();
             this.lblAnneeParution = new System.Windows.Forms.Label();
-            this.lblIdEmployeVerif = new System.Windows.Forms.Label();
+            this.lblMdpAdmin = new System.Windows.Forms.Label();
             this.btnAjouterLivre = new System.Windows.Forms.Button();
             this.txtIdLivre = new System.Windows.Forms.TextBox();
             this.txtTitre = new System.Windows.Forms.TextBox();
             this.txtAuteur = new System.Windows.Forms.TextBox();
             this.txtAnneParution = new System.Windows.Forms.TextBox();
-            this.txtIdEmployeVerif = new System.Windows.Forms.TextBox();
+            this.txtMdpAdmin = new System.Windows.Forms.TextBox();
             this.btnModifierLivre = new System.Windows.Forms.Button();
             this.btnSupprimerLivre = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -95,15 +95,15 @@
             this.lblAnneeParution.TabIndex = 4;
             this.lblAnneeParution.Text = "Année de parution : ";
             // 
-            // lblIdEmployeVerif
+            // lblMdpAdmin
             // 
-            this.lblIdEmployeVerif.AutoSize = true;
-            this.lblIdEmployeVerif.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblIdEmployeVerif.Location = new System.Drawing.Point(478, 126);
-            this.lblIdEmployeVerif.Name = "lblIdEmployeVerif";
-            this.lblIdEmployeVerif.Size = new System.Drawing.Size(153, 24);
-            this.lblIdEmployeVerif.TabIndex = 5;
-            this.lblIdEmployeVerif.Text = "Id de l\'employé : ";
+            this.lblMdpAdmin.AutoSize = true;
+            this.lblMdpAdmin.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMdpAdmin.Location = new System.Drawing.Point(430, 127);
+            this.lblMdpAdmin.Name = "lblMdpAdmin";
+            this.lblMdpAdmin.Size = new System.Drawing.Size(190, 24);
+            this.lblMdpAdmin.TabIndex = 5;
+            this.lblMdpAdmin.Text = "Mot de passe admin :";
             // 
             // btnAjouterLivre
             // 
@@ -143,12 +143,12 @@
             this.txtAnneParution.Size = new System.Drawing.Size(157, 20);
             this.txtAnneParution.TabIndex = 10;
             // 
-            // txtIdEmployeVerif
+            // txtMdpAdmin
             // 
-            this.txtIdEmployeVerif.Location = new System.Drawing.Point(626, 131);
-            this.txtIdEmployeVerif.Name = "txtIdEmployeVerif";
-            this.txtIdEmployeVerif.Size = new System.Drawing.Size(145, 20);
-            this.txtIdEmployeVerif.TabIndex = 11;
+            this.txtMdpAdmin.Location = new System.Drawing.Point(626, 131);
+            this.txtMdpAdmin.Name = "txtMdpAdmin";
+            this.txtMdpAdmin.Size = new System.Drawing.Size(145, 20);
+            this.txtMdpAdmin.TabIndex = 11;
             // 
             // btnModifierLivre
             // 
@@ -177,13 +177,13 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.btnSupprimerLivre);
             this.Controls.Add(this.btnModifierLivre);
-            this.Controls.Add(this.txtIdEmployeVerif);
+            this.Controls.Add(this.txtMdpAdmin);
             this.Controls.Add(this.txtAnneParution);
             this.Controls.Add(this.txtAuteur);
             this.Controls.Add(this.txtTitre);
             this.Controls.Add(this.txtIdLivre);
             this.Controls.Add(this.btnAjouterLivre);
-            this.Controls.Add(this.lblIdEmployeVerif);
+            this.Controls.Add(this.lblMdpAdmin);
             this.Controls.Add(this.lblAnneeParution);
             this.Controls.Add(this.lblAuteur);
             this.Controls.Add(this.lblTitre);
@@ -204,13 +204,13 @@
         private System.Windows.Forms.Label lblTitre;
         private System.Windows.Forms.Label lblAuteur;
         private System.Windows.Forms.Label lblAnneeParution;
-        private System.Windows.Forms.Label lblIdEmployeVerif;
+        private System.Windows.Forms.Label lblMdpAdmin;
         private System.Windows.Forms.Button btnAjouterLivre;
         private System.Windows.Forms.TextBox txtIdLivre;
         private System.Windows.Forms.TextBox txtTitre;
         private System.Windows.Forms.TextBox txtAuteur;
         private System.Windows.Forms.TextBox txtAnneParution;
-        private System.Windows.Forms.TextBox txtIdEmployeVerif;
+        private System.Windows.Forms.TextBox txtMdpAdmin;
         private System.Windows.Forms.Button btnModifierLivre;
         private System.Windows.Forms.Button btnSupprimerLivre;
     }

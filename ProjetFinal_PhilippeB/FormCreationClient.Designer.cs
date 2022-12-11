@@ -37,13 +37,13 @@
             this.lblDateNaissanceClient = new System.Windows.Forms.Label();
             this.lblAdresseClient = new System.Windows.Forms.Label();
             this.lblSexeClient = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtPrenomClient = new System.Windows.Forms.TextBox();
+            this.txtNomClient = new System.Windows.Forms.TextBox();
+            this.txtTelClient = new System.Windows.Forms.TextBox();
+            this.txtAdresseClient = new System.Windows.Forms.TextBox();
             this.checkBoxHommeClient = new System.Windows.Forms.CheckBox();
             this.checkBoxFemmeClient = new System.Windows.Forms.CheckBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePickerClient = new System.Windows.Forms.DateTimePicker();
             this.btnCreerClient = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -136,33 +136,33 @@
             this.lblSexeClient.TabIndex = 8;
             this.lblSexeClient.Text = "Sexe :";
             // 
-            // textBox1
+            // txtPrenomClient
             // 
-            this.textBox1.Location = new System.Drawing.Point(246, 124);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(189, 20);
-            this.textBox1.TabIndex = 9;
+            this.txtPrenomClient.Location = new System.Drawing.Point(246, 124);
+            this.txtPrenomClient.Name = "txtPrenomClient";
+            this.txtPrenomClient.Size = new System.Drawing.Size(189, 20);
+            this.txtPrenomClient.TabIndex = 9;
             // 
-            // textBox2
+            // txtNomClient
             // 
-            this.textBox2.Location = new System.Drawing.Point(246, 183);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(189, 20);
-            this.textBox2.TabIndex = 10;
+            this.txtNomClient.Location = new System.Drawing.Point(246, 183);
+            this.txtNomClient.Name = "txtNomClient";
+            this.txtNomClient.Size = new System.Drawing.Size(189, 20);
+            this.txtNomClient.TabIndex = 10;
             // 
-            // textBox3
+            // txtTelClient
             // 
-            this.textBox3.Location = new System.Drawing.Point(246, 241);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(189, 20);
-            this.textBox3.TabIndex = 11;
+            this.txtTelClient.Location = new System.Drawing.Point(246, 241);
+            this.txtTelClient.Name = "txtTelClient";
+            this.txtTelClient.Size = new System.Drawing.Size(189, 20);
+            this.txtTelClient.TabIndex = 11;
             // 
-            // textBox4
+            // txtAdresseClient
             // 
-            this.textBox4.Location = new System.Drawing.Point(246, 344);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(189, 20);
-            this.textBox4.TabIndex = 12;
+            this.txtAdresseClient.Location = new System.Drawing.Point(246, 344);
+            this.txtAdresseClient.Name = "txtAdresseClient";
+            this.txtAdresseClient.Size = new System.Drawing.Size(189, 20);
+            this.txtAdresseClient.TabIndex = 12;
             // 
             // checkBoxHommeClient
             // 
@@ -186,12 +186,12 @@
             this.checkBoxFemmeClient.Text = "Femme";
             this.checkBoxFemmeClient.UseVisualStyleBackColor = true;
             // 
-            // dateTimePicker1
+            // dateTimePickerClient
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(246, 294);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(191, 20);
-            this.dateTimePicker1.TabIndex = 15;
+            this.dateTimePickerClient.Location = new System.Drawing.Point(246, 294);
+            this.dateTimePickerClient.Name = "dateTimePickerClient";
+            this.dateTimePickerClient.Size = new System.Drawing.Size(191, 20);
+            this.dateTimePickerClient.TabIndex = 15;
             // 
             // btnCreerClient
             // 
@@ -209,13 +209,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.btnCreerClient);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.dateTimePickerClient);
             this.Controls.Add(this.checkBoxFemmeClient);
             this.Controls.Add(this.checkBoxHommeClient);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtAdresseClient);
+            this.Controls.Add(this.txtTelClient);
+            this.Controls.Add(this.txtNomClient);
+            this.Controls.Add(this.txtPrenomClient);
             this.Controls.Add(this.lblSexeClient);
             this.Controls.Add(this.lblAdresseClient);
             this.Controls.Add(this.lblDateNaissanceClient);
@@ -244,13 +244,13 @@
         private System.Windows.Forms.Label lblDateNaissanceClient;
         private System.Windows.Forms.Label lblAdresseClient;
         private System.Windows.Forms.Label lblSexeClient;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtPrenomClient;
+        private System.Windows.Forms.TextBox txtNomClient;
+        private System.Windows.Forms.TextBox txtTelClient;
+        private System.Windows.Forms.TextBox txtAdresseClient;
         private System.Windows.Forms.CheckBox checkBoxHommeClient;
         private System.Windows.Forms.CheckBox checkBoxFemmeClient;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dateTimePickerClient;
         private System.Windows.Forms.Button btnCreerClient;
     }
 }
