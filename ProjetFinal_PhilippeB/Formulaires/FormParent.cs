@@ -76,5 +76,21 @@ namespace ProjetFinal_PhilippeB
         {
             Application.Exit ();
         }
+
+        private void listeDesClientsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ListeClients formListeClients = new ListeClients(); // Création d'une instance 
+            formListeClients.MdiParent = this; // définir le formulaire parent
+            formListeClients.Show(); // affichage du formulaire enfant
+            label1.Hide();
+        }
+
+        private void listesDesEmployésToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ListeEmployes formListeEmployes = new ListeEmployes(); // Création d'une instance 
+            formListeEmployes.MdiParent = this; // définir le formulaire parent
+            formListeEmployes.Show(); // affichage du formulaire enfant
+            label1.Hide();
+        }
     }
 }

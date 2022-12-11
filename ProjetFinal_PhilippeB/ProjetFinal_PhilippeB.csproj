@@ -46,60 +46,78 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FormParent.cs">
+    <Compile Include="Formulaires\FormListeEmployes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormParent.Designer.cs">
+    <Compile Include="Formulaires\FormListeEmployes.Designer.cs">
+      <DependentUpon>FormListeEmployes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formulaires\FormListeClients.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formulaires\FormListeClients.Designer.cs">
+      <DependentUpon>FormListeClients.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formulaires\FormParent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formulaires\FormParent.Designer.cs">
       <DependentUpon>FormParent.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormRetour.cs">
+    <Compile Include="Formulaires\FormRetour.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormRetour.Designer.cs">
+    <Compile Include="Formulaires\FormRetour.Designer.cs">
       <DependentUpon>FormRetour.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormEmprunt.cs">
+    <Compile Include="Formulaires\FormEmprunt.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormEmprunt.Designer.cs">
+    <Compile Include="Formulaires\FormEmprunt.Designer.cs">
       <DependentUpon>FormEmprunt.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormCreationClient.cs">
+    <Compile Include="Formulaires\FormCreationClient.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormCreationClient.Designer.cs">
+    <Compile Include="Formulaires\FormCreationClient.Designer.cs">
       <DependentUpon>FormCreationClient.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormParametrageEmployes.cs">
+    <Compile Include="Formulaires\FormParametrageEmployes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormParametrageEmployes.Designer.cs">
+    <Compile Include="Formulaires\FormParametrageEmployes.Designer.cs">
       <DependentUpon>FormParametrageEmployes.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormParametrageLivres.cs">
+    <Compile Include="Formulaires\FormParametrageLivres.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormParametrageLivres.Designer.cs">
+    <Compile Include="Formulaires\FormParametrageLivres.Designer.cs">
       <DependentUpon>FormParametrageLivres.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="FormParent.resx">
+    <EmbeddedResource Include="Formulaires\FormListeEmployes.resx">
+      <DependentUpon>FormListeEmployes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formulaires\FormListeClients.resx">
+      <DependentUpon>FormListeClients.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formulaires\FormParent.resx">
       <DependentUpon>FormParent.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormRetour.resx">
+    <EmbeddedResource Include="Formulaires\FormRetour.resx">
       <DependentUpon>FormRetour.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormEmprunt.resx">
+    <EmbeddedResource Include="Formulaires\FormEmprunt.resx">
       <DependentUpon>FormEmprunt.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormCreationClient.resx">
+    <EmbeddedResource Include="Formulaires\FormCreationClient.resx">
       <DependentUpon>FormCreationClient.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormParametrageEmployes.resx">
+    <EmbeddedResource Include="Formulaires\FormParametrageEmployes.resx">
       <DependentUpon>FormParametrageEmployes.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormParametrageLivres.resx">
+    <EmbeddedResource Include="Formulaires\FormParametrageLivres.resx">
       <DependentUpon>FormParametrageLivres.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -123,6 +141,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Classes\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

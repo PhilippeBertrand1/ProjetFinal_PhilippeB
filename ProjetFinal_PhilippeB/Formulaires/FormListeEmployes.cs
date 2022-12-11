@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace ProjetFinal_PhilippeB
 {
-    public partial class EmpruntLivre : Form
+    public partial class ListeEmployes : Form
     {
-        public EmpruntLivre()
+        public ListeEmployes()
         {
             InitializeComponent();
-        }
-
-        private void listViewEmprunt_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

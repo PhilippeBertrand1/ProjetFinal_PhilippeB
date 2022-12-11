@@ -30,13 +30,15 @@
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.clientToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.employéToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.emprunterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.retoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.créationDunCompteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.quitterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.employéToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ajouterSupprimerModifierUnLivreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ajouterSupprimerModifierUnEmployéToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.listeDesClientsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.listesDesEmployésToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.quitterToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
@@ -63,16 +65,6 @@
             this.clientToolStripMenuItem.Name = "clientToolStripMenuItem";
             this.clientToolStripMenuItem.Size = new System.Drawing.Size(50, 20);
             this.clientToolStripMenuItem.Text = "Client";
-            // 
-            // employéToolStripMenuItem
-            // 
-            this.employéToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.ajouterSupprimerModifierUnLivreToolStripMenuItem,
-            this.ajouterSupprimerModifierUnEmployéToolStripMenuItem,
-            this.quitterToolStripMenuItem1});
-            this.employéToolStripMenuItem.Name = "employéToolStripMenuItem";
-            this.employéToolStripMenuItem.Size = new System.Drawing.Size(65, 20);
-            this.employéToolStripMenuItem.Text = "Employé";
             // 
             // emprunterToolStripMenuItem
             // 
@@ -102,25 +94,51 @@
             this.quitterToolStripMenuItem.Text = "4. Quitter";
             this.quitterToolStripMenuItem.Click += new System.EventHandler(this.quitterToolStripMenuItem_Click);
             // 
+            // employéToolStripMenuItem
+            // 
+            this.employéToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ajouterSupprimerModifierUnLivreToolStripMenuItem,
+            this.ajouterSupprimerModifierUnEmployéToolStripMenuItem,
+            this.listeDesClientsToolStripMenuItem,
+            this.listesDesEmployésToolStripMenuItem,
+            this.quitterToolStripMenuItem1});
+            this.employéToolStripMenuItem.Name = "employéToolStripMenuItem";
+            this.employéToolStripMenuItem.Size = new System.Drawing.Size(65, 20);
+            this.employéToolStripMenuItem.Text = "Employé";
+            // 
             // ajouterSupprimerModifierUnLivreToolStripMenuItem
             // 
             this.ajouterSupprimerModifierUnLivreToolStripMenuItem.Name = "ajouterSupprimerModifierUnLivreToolStripMenuItem";
-            this.ajouterSupprimerModifierUnLivreToolStripMenuItem.Size = new System.Drawing.Size(310, 22);
-            this.ajouterSupprimerModifierUnLivreToolStripMenuItem.Text = "1.Ajouter / Supprimer / Modifier un livre";
+            this.ajouterSupprimerModifierUnLivreToolStripMenuItem.Size = new System.Drawing.Size(313, 22);
+            this.ajouterSupprimerModifierUnLivreToolStripMenuItem.Text = "1. Ajouter / Supprimer / Modifier un livre";
             this.ajouterSupprimerModifierUnLivreToolStripMenuItem.Click += new System.EventHandler(this.ajouterSupprimerModifierUnLivreToolStripMenuItem_Click);
             // 
             // ajouterSupprimerModifierUnEmployéToolStripMenuItem
             // 
             this.ajouterSupprimerModifierUnEmployéToolStripMenuItem.Name = "ajouterSupprimerModifierUnEmployéToolStripMenuItem";
-            this.ajouterSupprimerModifierUnEmployéToolStripMenuItem.Size = new System.Drawing.Size(310, 22);
-            this.ajouterSupprimerModifierUnEmployéToolStripMenuItem.Text = "2.Ajouter / Supprimer / Modifier un employé";
+            this.ajouterSupprimerModifierUnEmployéToolStripMenuItem.Size = new System.Drawing.Size(313, 22);
+            this.ajouterSupprimerModifierUnEmployéToolStripMenuItem.Text = "2. Ajouter / Supprimer / Modifier un employé";
             this.ajouterSupprimerModifierUnEmployéToolStripMenuItem.Click += new System.EventHandler(this.ajouterSupprimerModifierUnEmployéToolStripMenuItem_Click);
+            // 
+            // listeDesClientsToolStripMenuItem
+            // 
+            this.listeDesClientsToolStripMenuItem.Name = "listeDesClientsToolStripMenuItem";
+            this.listeDesClientsToolStripMenuItem.Size = new System.Drawing.Size(313, 22);
+            this.listeDesClientsToolStripMenuItem.Text = "3. Liste des clients";
+            this.listeDesClientsToolStripMenuItem.Click += new System.EventHandler(this.listeDesClientsToolStripMenuItem_Click);
+            // 
+            // listesDesEmployésToolStripMenuItem
+            // 
+            this.listesDesEmployésToolStripMenuItem.Name = "listesDesEmployésToolStripMenuItem";
+            this.listesDesEmployésToolStripMenuItem.Size = new System.Drawing.Size(313, 22);
+            this.listesDesEmployésToolStripMenuItem.Text = "4. Listes des employés";
+            this.listesDesEmployésToolStripMenuItem.Click += new System.EventHandler(this.listesDesEmployésToolStripMenuItem_Click);
             // 
             // quitterToolStripMenuItem1
             // 
             this.quitterToolStripMenuItem1.Name = "quitterToolStripMenuItem1";
-            this.quitterToolStripMenuItem1.Size = new System.Drawing.Size(310, 22);
-            this.quitterToolStripMenuItem1.Text = "3.Quitter";
+            this.quitterToolStripMenuItem1.Size = new System.Drawing.Size(313, 22);
+            this.quitterToolStripMenuItem1.Text = "5. Quitter";
             this.quitterToolStripMenuItem1.Click += new System.EventHandler(this.quitterToolStripMenuItem1_Click);
             // 
             // label1
@@ -166,6 +184,8 @@
         private System.Windows.Forms.ToolStripMenuItem ajouterSupprimerModifierUnEmployéToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem quitterToolStripMenuItem1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ToolStripMenuItem listeDesClientsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem listesDesEmployésToolStripMenuItem;
     }
 }
 

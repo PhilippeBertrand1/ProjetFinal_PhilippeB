@@ -289,6 +289,7 @@
             this.Controls.Add(this.txtIdentifiantEmploye);
             this.Controls.Add(this.lblIdendifiantEmploye);
             this.Controls.Add(this.lblParametrageEmployes);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "AjouterSupprimerModifierEmployes";
             this.Text = "Ajouter / Supprimer / Modifier employés";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;

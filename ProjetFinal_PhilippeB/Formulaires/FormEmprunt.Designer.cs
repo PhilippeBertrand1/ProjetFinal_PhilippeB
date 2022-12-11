@@ -30,13 +30,13 @@
         {
             this.lblEmprunt = new System.Windows.Forms.Label();
             this.listViewEmprunt = new System.Windows.Forms.ListView();
-            this.lblEmpruntLivre = new System.Windows.Forms.Label();
-            this.txtIdEmprunt = new System.Windows.Forms.TextBox();
-            this.btnEmprunter = new System.Windows.Forms.Button();
             this.columnIdentifiant = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnNom = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnAuteur = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnAnnee = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.lblEmpruntLivre = new System.Windows.Forms.Label();
+            this.txtIdEmprunt = new System.Windows.Forms.TextBox();
+            this.btnEmprunter = new System.Windows.Forms.Button();
             this.lblIdClientValide = new System.Windows.Forms.Label();
             this.txtIdClient = new System.Windows.Forms.TextBox();
             this.lblListeLivresDispo = new System.Windows.Forms.Label();
@@ -68,6 +68,26 @@
             this.listViewEmprunt.View = System.Windows.Forms.View.Details;
             this.listViewEmprunt.SelectedIndexChanged += new System.EventHandler(this.listViewEmprunt_SelectedIndexChanged);
             // 
+            // columnIdentifiant
+            // 
+            this.columnIdentifiant.Text = "Identifiant";
+            this.columnIdentifiant.Width = 124;
+            // 
+            // columnNom
+            // 
+            this.columnNom.Text = "Nom";
+            this.columnNom.Width = 112;
+            // 
+            // columnAuteur
+            // 
+            this.columnAuteur.Text = "Auteur";
+            this.columnAuteur.Width = 154;
+            // 
+            // columnAnnee
+            // 
+            this.columnAnnee.Text = "Année de parution";
+            this.columnAnnee.Width = 110;
+            // 
             // lblEmpruntLivre
             // 
             this.lblEmpruntLivre.AutoSize = true;
@@ -94,26 +114,6 @@
             this.btnEmprunter.TabIndex = 4;
             this.btnEmprunter.Text = "Emprunter ";
             this.btnEmprunter.UseVisualStyleBackColor = true;
-            // 
-            // columnIdentifiant
-            // 
-            this.columnIdentifiant.Text = "Identifiant";
-            this.columnIdentifiant.Width = 124;
-            // 
-            // columnNom
-            // 
-            this.columnNom.Text = "Nom";
-            this.columnNom.Width = 112;
-            // 
-            // columnAuteur
-            // 
-            this.columnAuteur.Text = "Auteur";
-            this.columnAuteur.Width = 154;
-            // 
-            // columnAnnee
-            // 
-            this.columnAnnee.Text = "Année de parution";
-            this.columnAnnee.Width = 110;
             // 
             // lblIdClientValide
             // 
@@ -158,6 +158,7 @@
             this.Name = "EmpruntLivre";
             this.Text = "Emprunt d\'un livre";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.EmpruntLivre_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
