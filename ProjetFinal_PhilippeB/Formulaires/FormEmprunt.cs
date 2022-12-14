@@ -26,5 +26,15 @@ namespace ProjetFinal_PhilippeB
         {
 
         }
+
+        private void dataGridViewLivre_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void btnEmprunter_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

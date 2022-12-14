@@ -16,14 +16,14 @@ namespace ProjetFinal_PhilippeB
         private SqlDataAdapter adapter;
         private string connectionString;
         private DataSet dsBibliotheque;
-        private DataTable dtClient;
+        private DataTable dtLivre;
 
         public SqlConnection Connection { get => connection; set => connection = value; }
         public SqlCommand Command { get => command; set => command = value; }
         public SqlDataAdapter Adapter { get => adapter; set => adapter = value; }
         public string ConnectionString { get => connectionString; }
         public DataSet DsBibliotheque { get => dsBibliotheque; set => dsBibliotheque = value; }
-        public DataTable DtClient { get => dtClient; set => dtClient = value; }
+        public DataTable DtLivre { get => dtLivre; set => dtLivre = value; }
         
 
         public SqlClient()
@@ -33,7 +33,7 @@ namespace ProjetFinal_PhilippeB
             command = new SqlCommand();
             connection = new SqlConnection(connectionString);
             dsBibliotheque = new DataSet();
-            dtClient = new DataTable();
+            dtLivre = new DataTable();
         }
     }
 }

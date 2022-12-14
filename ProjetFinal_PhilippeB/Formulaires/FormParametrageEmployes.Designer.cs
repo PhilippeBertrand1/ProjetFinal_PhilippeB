@@ -31,14 +31,10 @@
             this.lblParametrageEmployes = new System.Windows.Forms.Label();
             this.btnCreerEmploye = new System.Windows.Forms.Button();
             this.dateTimePickerEmploye = new System.Windows.Forms.DateTimePicker();
-            this.checkBoxFemmeEmploye = new System.Windows.Forms.CheckBox();
-            this.checkBoxHommeEmploye = new System.Windows.Forms.CheckBox();
-            this.txtAdresseEmploye = new System.Windows.Forms.TextBox();
             this.txtTelEmploye = new System.Windows.Forms.TextBox();
             this.txtNomEmploye = new System.Windows.Forms.TextBox();
             this.txtPrenomEmploye = new System.Windows.Forms.TextBox();
             this.lblSexeEmploye = new System.Windows.Forms.Label();
-            this.lblAdresseEmploye = new System.Windows.Forms.Label();
             this.lblDateNaissanceEmploye = new System.Windows.Forms.Label();
             this.lblTelEmploye = new System.Windows.Forms.Label();
             this.lblNomEmploye = new System.Windows.Forms.Label();
@@ -51,6 +47,10 @@
             this.txtTauxHoraire = new System.Windows.Forms.TextBox();
             this.btnModifierEmploye = new System.Windows.Forms.Button();
             this.btnSupprimerEmploye = new System.Windows.Forms.Button();
+            this.rbHomme = new System.Windows.Forms.RadioButton();
+            this.rbFemme = new System.Windows.Forms.RadioButton();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblParametrageEmployes
@@ -72,6 +72,7 @@
             this.btnCreerEmploye.TabIndex = 32;
             this.btnCreerEmploye.Text = "Créer";
             this.btnCreerEmploye.UseVisualStyleBackColor = true;
+            this.btnCreerEmploye.Click += new System.EventHandler(this.btnCreerEmploye_Click);
             // 
             // dateTimePickerEmploye
             // 
@@ -79,35 +80,6 @@
             this.dateTimePickerEmploye.Name = "dateTimePickerEmploye";
             this.dateTimePickerEmploye.Size = new System.Drawing.Size(191, 20);
             this.dateTimePickerEmploye.TabIndex = 31;
-            // 
-            // checkBoxFemmeEmploye
-            // 
-            this.checkBoxFemmeEmploye.AutoSize = true;
-            this.checkBoxFemmeEmploye.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBoxFemmeEmploye.Location = new System.Drawing.Point(375, 368);
-            this.checkBoxFemmeEmploye.Name = "checkBoxFemmeEmploye";
-            this.checkBoxFemmeEmploye.Size = new System.Drawing.Size(82, 24);
-            this.checkBoxFemmeEmploye.TabIndex = 30;
-            this.checkBoxFemmeEmploye.Text = "Femme";
-            this.checkBoxFemmeEmploye.UseVisualStyleBackColor = true;
-            // 
-            // checkBoxHommeEmploye
-            // 
-            this.checkBoxHommeEmploye.AutoSize = true;
-            this.checkBoxHommeEmploye.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBoxHommeEmploye.Location = new System.Drawing.Point(266, 370);
-            this.checkBoxHommeEmploye.Name = "checkBoxHommeEmploye";
-            this.checkBoxHommeEmploye.Size = new System.Drawing.Size(84, 24);
-            this.checkBoxHommeEmploye.TabIndex = 29;
-            this.checkBoxHommeEmploye.Text = "Homme";
-            this.checkBoxHommeEmploye.UseVisualStyleBackColor = true;
-            // 
-            // txtAdresseEmploye
-            // 
-            this.txtAdresseEmploye.Location = new System.Drawing.Point(266, 318);
-            this.txtAdresseEmploye.Name = "txtAdresseEmploye";
-            this.txtAdresseEmploye.Size = new System.Drawing.Size(189, 20);
-            this.txtAdresseEmploye.TabIndex = 28;
             // 
             // txtTelEmploye
             // 
@@ -134,21 +106,11 @@
             // 
             this.lblSexeEmploye.AutoSize = true;
             this.lblSexeEmploye.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSexeEmploye.Location = new System.Drawing.Point(73, 368);
+            this.lblSexeEmploye.Location = new System.Drawing.Point(8, 9);
             this.lblSexeEmploye.Name = "lblSexeEmploye";
             this.lblSexeEmploye.Size = new System.Drawing.Size(53, 20);
             this.lblSexeEmploye.TabIndex = 24;
             this.lblSexeEmploye.Text = "Sexe :";
-            // 
-            // lblAdresseEmploye
-            // 
-            this.lblAdresseEmploye.AutoSize = true;
-            this.lblAdresseEmploye.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAdresseEmploye.Location = new System.Drawing.Point(73, 319);
-            this.lblAdresseEmploye.Name = "lblAdresseEmploye";
-            this.lblAdresseEmploye.Size = new System.Drawing.Size(80, 20);
-            this.lblAdresseEmploye.TabIndex = 23;
-            this.lblAdresseEmploye.Text = "Adresse : ";
             // 
             // lblDateNaissanceEmploye
             // 
@@ -228,7 +190,7 @@
             // 
             this.lblTauxHoraire.AutoSize = true;
             this.lblTauxHoraire.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTauxHoraire.Location = new System.Drawing.Point(74, 406);
+            this.lblTauxHoraire.Location = new System.Drawing.Point(69, 378);
             this.lblTauxHoraire.Name = "lblTauxHoraire";
             this.lblTauxHoraire.Size = new System.Drawing.Size(108, 20);
             this.lblTauxHoraire.TabIndex = 35;
@@ -236,7 +198,7 @@
             // 
             // txtTauxHoraire
             // 
-            this.txtTauxHoraire.Location = new System.Drawing.Point(266, 408);
+            this.txtTauxHoraire.Location = new System.Drawing.Point(266, 380);
             this.txtTauxHoraire.Name = "txtTauxHoraire";
             this.txtTauxHoraire.Size = new System.Drawing.Size(189, 20);
             this.txtTauxHoraire.TabIndex = 36;
@@ -250,6 +212,7 @@
             this.btnModifierEmploye.TabIndex = 37;
             this.btnModifierEmploye.Text = "Modifier";
             this.btnModifierEmploye.UseVisualStyleBackColor = true;
+            this.btnModifierEmploye.Click += new System.EventHandler(this.btnModifierEmploye_Click);
             // 
             // btnSupprimerEmploye
             // 
@@ -260,12 +223,49 @@
             this.btnSupprimerEmploye.TabIndex = 38;
             this.btnSupprimerEmploye.Text = "Supprimer";
             this.btnSupprimerEmploye.UseVisualStyleBackColor = true;
+            this.btnSupprimerEmploye.Click += new System.EventHandler(this.btnSupprimerEmploye_Click);
+            // 
+            // rbHomme
+            // 
+            this.rbHomme.AutoSize = true;
+            this.rbHomme.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbHomme.Location = new System.Drawing.Point(213, 5);
+            this.rbHomme.Name = "rbHomme";
+            this.rbHomme.Size = new System.Drawing.Size(83, 24);
+            this.rbHomme.TabIndex = 39;
+            this.rbHomme.TabStop = true;
+            this.rbHomme.Text = "Homme";
+            this.rbHomme.UseVisualStyleBackColor = true;
+            // 
+            // rbFemme
+            // 
+            this.rbFemme.AutoSize = true;
+            this.rbFemme.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbFemme.Location = new System.Drawing.Point(302, 7);
+            this.rbFemme.Name = "rbFemme";
+            this.rbFemme.Size = new System.Drawing.Size(81, 24);
+            this.rbFemme.TabIndex = 40;
+            this.rbFemme.TabStop = true;
+            this.rbFemme.Text = "Femme";
+            this.rbFemme.UseVisualStyleBackColor = true;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.lblSexeEmploye);
+            this.groupBox1.Controls.Add(this.rbFemme);
+            this.groupBox1.Controls.Add(this.rbHomme);
+            this.groupBox1.Location = new System.Drawing.Point(68, 309);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(389, 46);
+            this.groupBox1.TabIndex = 41;
+            this.groupBox1.TabStop = false;
             // 
             // AjouterSupprimerModifierEmployes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnSupprimerEmploye);
             this.Controls.Add(this.btnModifierEmploye);
             this.Controls.Add(this.txtTauxHoraire);
@@ -274,14 +274,9 @@
             this.Controls.Add(this.lblMdpAdmin2);
             this.Controls.Add(this.btnCreerEmploye);
             this.Controls.Add(this.dateTimePickerEmploye);
-            this.Controls.Add(this.checkBoxFemmeEmploye);
-            this.Controls.Add(this.checkBoxHommeEmploye);
-            this.Controls.Add(this.txtAdresseEmploye);
             this.Controls.Add(this.txtTelEmploye);
             this.Controls.Add(this.txtNomEmploye);
             this.Controls.Add(this.txtPrenomEmploye);
-            this.Controls.Add(this.lblSexeEmploye);
-            this.Controls.Add(this.lblAdresseEmploye);
             this.Controls.Add(this.lblDateNaissanceEmploye);
             this.Controls.Add(this.lblTelEmploye);
             this.Controls.Add(this.lblNomEmploye);
@@ -293,6 +288,8 @@
             this.Name = "AjouterSupprimerModifierEmployes";
             this.Text = "Ajouter / Supprimer / Modifier employés";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -303,14 +300,10 @@
         private System.Windows.Forms.Label lblParametrageEmployes;
         private System.Windows.Forms.Button btnCreerEmploye;
         private System.Windows.Forms.DateTimePicker dateTimePickerEmploye;
-        private System.Windows.Forms.CheckBox checkBoxFemmeEmploye;
-        private System.Windows.Forms.CheckBox checkBoxHommeEmploye;
-        private System.Windows.Forms.TextBox txtAdresseEmploye;
         private System.Windows.Forms.TextBox txtTelEmploye;
         private System.Windows.Forms.TextBox txtNomEmploye;
         private System.Windows.Forms.TextBox txtPrenomEmploye;
         private System.Windows.Forms.Label lblSexeEmploye;
-        private System.Windows.Forms.Label lblAdresseEmploye;
         private System.Windows.Forms.Label lblDateNaissanceEmploye;
         private System.Windows.Forms.Label lblTelEmploye;
         private System.Windows.Forms.Label lblNomEmploye;
@@ -323,5 +316,8 @@
         private System.Windows.Forms.TextBox txtTauxHoraire;
         private System.Windows.Forms.Button btnModifierEmploye;
         private System.Windows.Forms.Button btnSupprimerEmploye;
+        private System.Windows.Forms.RadioButton rbHomme;
+        private System.Windows.Forms.RadioButton rbFemme;
+        private System.Windows.Forms.GroupBox groupBox1;
     }
 }

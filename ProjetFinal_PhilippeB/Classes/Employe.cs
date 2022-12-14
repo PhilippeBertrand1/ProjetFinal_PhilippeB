@@ -9,6 +9,7 @@ namespace ProjetFinal_PhilippeB
     public class Employe : Personne
     {
         private int tauxHoraire;
+        
 
 
         public int TauxHoraire
@@ -16,16 +17,19 @@ namespace ProjetFinal_PhilippeB
             get { return tauxHoraire; }
             set { tauxHoraire = value; }
         }
+    
 
         public Employe()
         {
             tauxHoraire = 0;
+           
         }
 
-        public Employe(string p_numEtudiant, string p_prenom, string p_nom, string p_NumTel, DateTime p_dateNaissance, string p_sexe, int p_tauxHoraire)
-            : base(p_numEtudiant, p_prenom, p_nom, p_NumTel, p_dateNaissance, p_sexe)
+        public Employe(string p_numIdentifiant, string p_prenom, string p_nom, string p_NumTel, DateTime p_dateNaissance, char p_sexe, int p_tauxHoraire)
+            : base(p_numIdentifiant, p_prenom, p_nom, p_NumTel, p_dateNaissance, p_sexe)
         {
             this.TauxHoraire = p_tauxHoraire;
+            
         }
 
         public string Afficher()

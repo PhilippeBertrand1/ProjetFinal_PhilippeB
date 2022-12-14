@@ -29,17 +29,14 @@
         private void InitializeComponent()
         {
             this.lblEmprunt = new System.Windows.Forms.Label();
-            this.listViewEmprunt = new System.Windows.Forms.ListView();
-            this.columnIdentifiant = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnNom = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnAuteur = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnAnnee = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.lblEmpruntLivre = new System.Windows.Forms.Label();
             this.txtIdEmprunt = new System.Windows.Forms.TextBox();
             this.btnEmprunter = new System.Windows.Forms.Button();
             this.lblIdClientValide = new System.Windows.Forms.Label();
             this.txtIdClient = new System.Windows.Forms.TextBox();
             this.lblListeLivresDispo = new System.Windows.Forms.Label();
+            this.dataGridViewLivre = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewLivre)).BeginInit();
             this.SuspendLayout();
             // 
             // lblEmprunt
@@ -51,42 +48,6 @@
             this.lblEmprunt.Size = new System.Drawing.Size(248, 31);
             this.lblEmprunt.TabIndex = 0;
             this.lblEmprunt.Text = "Emprunt d\'un livre";
-            // 
-            // listViewEmprunt
-            // 
-            this.listViewEmprunt.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnIdentifiant,
-            this.columnNom,
-            this.columnAuteur,
-            this.columnAnnee});
-            this.listViewEmprunt.HideSelection = false;
-            this.listViewEmprunt.Location = new System.Drawing.Point(100, 217);
-            this.listViewEmprunt.Name = "listViewEmprunt";
-            this.listViewEmprunt.Size = new System.Drawing.Size(576, 207);
-            this.listViewEmprunt.TabIndex = 1;
-            this.listViewEmprunt.UseCompatibleStateImageBehavior = false;
-            this.listViewEmprunt.View = System.Windows.Forms.View.Details;
-            this.listViewEmprunt.SelectedIndexChanged += new System.EventHandler(this.listViewEmprunt_SelectedIndexChanged);
-            // 
-            // columnIdentifiant
-            // 
-            this.columnIdentifiant.Text = "Identifiant";
-            this.columnIdentifiant.Width = 124;
-            // 
-            // columnNom
-            // 
-            this.columnNom.Text = "Nom";
-            this.columnNom.Width = 112;
-            // 
-            // columnAuteur
-            // 
-            this.columnAuteur.Text = "Auteur";
-            this.columnAuteur.Width = 154;
-            // 
-            // columnAnnee
-            // 
-            this.columnAnnee.Text = "Année de parution";
-            this.columnAnnee.Width = 110;
             // 
             // lblEmpruntLivre
             // 
@@ -114,6 +75,7 @@
             this.btnEmprunter.TabIndex = 4;
             this.btnEmprunter.Text = "Emprunter ";
             this.btnEmprunter.UseVisualStyleBackColor = true;
+            this.btnEmprunter.Click += new System.EventHandler(this.btnEmprunter_Click);
             // 
             // lblIdClientValide
             // 
@@ -142,23 +104,33 @@
             this.lblListeLivresDispo.TabIndex = 7;
             this.lblListeLivresDispo.Text = "Liste des livres disponibles ";
             // 
+            // dataGridViewLivre
+            // 
+            this.dataGridViewLivre.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewLivre.Location = new System.Drawing.Point(88, 217);
+            this.dataGridViewLivre.Name = "dataGridViewLivre";
+            this.dataGridViewLivre.Size = new System.Drawing.Size(588, 204);
+            this.dataGridViewLivre.TabIndex = 8;
+            this.dataGridViewLivre.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewLivre_CellContentClick);
+            // 
             // EmpruntLivre
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.dataGridViewLivre);
             this.Controls.Add(this.lblListeLivresDispo);
             this.Controls.Add(this.txtIdClient);
             this.Controls.Add(this.lblIdClientValide);
             this.Controls.Add(this.btnEmprunter);
             this.Controls.Add(this.txtIdEmprunt);
             this.Controls.Add(this.lblEmpruntLivre);
-            this.Controls.Add(this.listViewEmprunt);
             this.Controls.Add(this.lblEmprunt);
             this.Name = "EmpruntLivre";
             this.Text = "Emprunt d\'un livre";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.EmpruntLivre_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewLivre)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -167,16 +139,12 @@
         #endregion
 
         private System.Windows.Forms.Label lblEmprunt;
-        private System.Windows.Forms.ListView listViewEmprunt;
-        private System.Windows.Forms.ColumnHeader columnIdentifiant;
-        private System.Windows.Forms.ColumnHeader columnNom;
-        private System.Windows.Forms.ColumnHeader columnAuteur;
-        private System.Windows.Forms.ColumnHeader columnAnnee;
         private System.Windows.Forms.Label lblEmpruntLivre;
         private System.Windows.Forms.TextBox txtIdEmprunt;
         private System.Windows.Forms.Button btnEmprunter;
         private System.Windows.Forms.Label lblIdClientValide;
         private System.Windows.Forms.TextBox txtIdClient;
         private System.Windows.Forms.Label lblListeLivresDispo;
+        private System.Windows.Forms.DataGridView dataGridViewLivre;
     }
 }

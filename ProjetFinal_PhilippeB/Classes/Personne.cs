@@ -13,7 +13,7 @@ namespace ProjetFinal_PhilippeB
         private string nom;
         private string numTelephone;
         private DateTime dateNaissance;
-        private string sexe;
+        private char sexe;
 
         public string NumIdentifiant
         {
@@ -41,7 +41,7 @@ namespace ProjetFinal_PhilippeB
             get { return dateNaissance; }
             set { dateNaissance = value; }
         }
-        public string Sexe
+        public char Sexe
         {
             get { return sexe; }
             set { sexe = value; }         
@@ -54,12 +54,12 @@ namespace ProjetFinal_PhilippeB
             nom = "";
             numTelephone = "";
             dateNaissance = DateTime.Now;
-            sexe = "";
+            sexe = '\0';
         }
 
-        public Personne(string p_numEtudiant, string p_prenom, string p_nom, string p_NumTel, DateTime p_dateNaissance, string p_sexe)
+        public Personne(string p_numIdentifiant, string p_prenom, string p_nom, string p_NumTel, DateTime p_dateNaissance, char p_sexe)
         {
-            this.NumIdentifiant = p_numEtudiant;
+            this.NumIdentifiant = p_numIdentifiant;
             this.Prenom = p_prenom;
             this.Nom = p_nom;
             this.numTelephone = p_NumTel;
