@@ -17,39 +17,20 @@ namespace ProjetFinal_PhilippeB
             InitializeComponent();
         }
 
-        private void btnEmprunter_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
+            foreach (Livre liv in StaticListes.LsLivresEmpruntes)
+                if (liv.LivreID == txtIdRetour.Text)
+                {
+                    foreach (Client client in StaticListes.LsClients)
+                        if (client.NumIdentifiant == txtIdClientRetour.Text)
+                        {
+                            StaticListes.LsInventaire.Add(liv);
+                            StaticListes.LsLivresEmpruntes.Remove(liv);
 
-        }
-
-        private void txtIdClient_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblIdClientValide_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblListeLivresDispo_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtIdEmprunt_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblEmpruntLivre_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void listViewEmprunt_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
+                            MessageBox.Show("Le livre sélectionné a été retourné", "Merci pour votre retour !");
+                        }
+                }
         }
     }
 }

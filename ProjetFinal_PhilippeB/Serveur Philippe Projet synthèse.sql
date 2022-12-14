@@ -23,7 +23,7 @@ create table Livre(
 LivreID char (2) primary key,
 Auteur varchar(30),
 Titre varchar (30),
-AnneeParution char(4),
+AnneeParution int,
 )
 
 select * from Livre

@@ -22,10 +22,7 @@ namespace ProjetFinal_PhilippeB
 
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
+       
 
         private void emprunterToolStripMenuItem_Click(object sender, EventArgs e)
         {

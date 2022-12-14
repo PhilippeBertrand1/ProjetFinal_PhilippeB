@@ -50,6 +50,14 @@
             this.rbHomme = new System.Windows.Forms.RadioButton();
             this.rbFemme = new System.Windows.Forms.RadioButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.lblErreurID = new System.Windows.Forms.Label();
+            this.lblErreurPrenomEmp = new System.Windows.Forms.Label();
+            this.lblErreurNomEmp = new System.Windows.Forms.Label();
+            this.lblErreurTelEmp = new System.Windows.Forms.Label();
+            this.lblErreurNaissanceEmp = new System.Windows.Forms.Label();
+            this.lblErreurSexeEmp = new System.Windows.Forms.Label();
+            this.lblErreurTauxHoraire = new System.Windows.Forms.Label();
+            this.lblErreurMdpAdminEmp = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -260,11 +268,83 @@
             this.groupBox1.TabIndex = 41;
             this.groupBox1.TabStop = false;
             // 
+            // lblErreurID
+            // 
+            this.lblErreurID.AutoSize = true;
+            this.lblErreurID.Location = new System.Drawing.Point(266, 73);
+            this.lblErreurID.Name = "lblErreurID";
+            this.lblErreurID.Size = new System.Drawing.Size(0, 13);
+            this.lblErreurID.TabIndex = 42;
+            // 
+            // lblErreurPrenomEmp
+            // 
+            this.lblErreurPrenomEmp.AutoSize = true;
+            this.lblErreurPrenomEmp.Location = new System.Drawing.Point(266, 125);
+            this.lblErreurPrenomEmp.Name = "lblErreurPrenomEmp";
+            this.lblErreurPrenomEmp.Size = new System.Drawing.Size(0, 13);
+            this.lblErreurPrenomEmp.TabIndex = 43;
+            // 
+            // lblErreurNomEmp
+            // 
+            this.lblErreurNomEmp.AutoSize = true;
+            this.lblErreurNomEmp.Location = new System.Drawing.Point(266, 190);
+            this.lblErreurNomEmp.Name = "lblErreurNomEmp";
+            this.lblErreurNomEmp.Size = new System.Drawing.Size(0, 13);
+            this.lblErreurNomEmp.TabIndex = 44;
+            // 
+            // lblErreurTelEmp
+            // 
+            this.lblErreurTelEmp.AutoSize = true;
+            this.lblErreurTelEmp.Location = new System.Drawing.Point(202, 239);
+            this.lblErreurTelEmp.Name = "lblErreurTelEmp";
+            this.lblErreurTelEmp.Size = new System.Drawing.Size(0, 13);
+            this.lblErreurTelEmp.TabIndex = 45;
+            // 
+            // lblErreurNaissanceEmp
+            // 
+            this.lblErreurNaissanceEmp.AutoSize = true;
+            this.lblErreurNaissanceEmp.Location = new System.Drawing.Point(266, 295);
+            this.lblErreurNaissanceEmp.Name = "lblErreurNaissanceEmp";
+            this.lblErreurNaissanceEmp.Size = new System.Drawing.Size(0, 13);
+            this.lblErreurNaissanceEmp.TabIndex = 46;
+            // 
+            // lblErreurSexeEmp
+            // 
+            this.lblErreurSexeEmp.AutoSize = true;
+            this.lblErreurSexeEmp.Location = new System.Drawing.Point(266, 361);
+            this.lblErreurSexeEmp.Name = "lblErreurSexeEmp";
+            this.lblErreurSexeEmp.Size = new System.Drawing.Size(0, 13);
+            this.lblErreurSexeEmp.TabIndex = 47;
+            // 
+            // lblErreurTauxHoraire
+            // 
+            this.lblErreurTauxHoraire.AutoSize = true;
+            this.lblErreurTauxHoraire.Location = new System.Drawing.Point(141, 416);
+            this.lblErreurTauxHoraire.Name = "lblErreurTauxHoraire";
+            this.lblErreurTauxHoraire.Size = new System.Drawing.Size(0, 13);
+            this.lblErreurTauxHoraire.TabIndex = 48;
+            // 
+            // lblErreurMdpAdminEmp
+            // 
+            this.lblErreurMdpAdminEmp.AutoSize = true;
+            this.lblErreurMdpAdminEmp.Location = new System.Drawing.Point(615, 174);
+            this.lblErreurMdpAdminEmp.Name = "lblErreurMdpAdminEmp";
+            this.lblErreurMdpAdminEmp.Size = new System.Drawing.Size(0, 13);
+            this.lblErreurMdpAdminEmp.TabIndex = 49;
+            // 
             // AjouterSupprimerModifierEmployes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.lblErreurMdpAdminEmp);
+            this.Controls.Add(this.lblErreurTauxHoraire);
+            this.Controls.Add(this.lblErreurSexeEmp);
+            this.Controls.Add(this.lblErreurNaissanceEmp);
+            this.Controls.Add(this.lblErreurTelEmp);
+            this.Controls.Add(this.lblErreurNomEmp);
+            this.Controls.Add(this.lblErreurPrenomEmp);
+            this.Controls.Add(this.lblErreurID);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnSupprimerEmploye);
             this.Controls.Add(this.btnModifierEmploye);
@@ -319,5 +399,13 @@
         private System.Windows.Forms.RadioButton rbHomme;
         private System.Windows.Forms.RadioButton rbFemme;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Label lblErreurID;
+        private System.Windows.Forms.Label lblErreurPrenomEmp;
+        private System.Windows.Forms.Label lblErreurNomEmp;
+        private System.Windows.Forms.Label lblErreurTelEmp;
+        private System.Windows.Forms.Label lblErreurNaissanceEmp;
+        private System.Windows.Forms.Label lblErreurSexeEmp;
+        private System.Windows.Forms.Label lblErreurTauxHoraire;
+        private System.Windows.Forms.Label lblErreurMdpAdminEmp;
     }
 }

@@ -9,7 +9,7 @@ using System.Data;
 
 namespace ProjetFinal_PhilippeB
 {
-    internal class SqlClient
+    internal class SqlBibliotheque
     {
         private SqlConnection connection;
         private SqlCommand command;
@@ -21,12 +21,12 @@ namespace ProjetFinal_PhilippeB
         public SqlConnection Connection { get => connection; set => connection = value; }
         public SqlCommand Command { get => command; set => command = value; }
         public SqlDataAdapter Adapter { get => adapter; set => adapter = value; }
-        public string ConnectionString { get => connectionString; }
+        public string ConnectionString { get => connectionString; set => connectionString = value; }
         public DataSet DsBibliotheque { get => dsBibliotheque; set => dsBibliotheque = value; }
         public DataTable DtLivre { get => dtLivre; set => dtLivre = value; }
-        
 
-        public SqlClient()
+
+        public SqlBibliotheque()
         {
             connectionString = "Data Source=C-I5CGJJSJR5LS7;Initial Catalog=Bibliotheque;User ID=sa;Password=sql";
             adapter = new SqlDataAdapter();
@@ -35,5 +35,7 @@ namespace ProjetFinal_PhilippeB
             dsBibliotheque = new DataSet();
             dtLivre = new DataTable();
         }
+
+        
     }
 }

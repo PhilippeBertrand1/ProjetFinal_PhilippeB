@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -47,6 +48,8 @@ namespace ProjetFinal_PhilippeB
             set { dateEmprunt = value; }
         }
 
+        public static SqlConnection Connection { get; internal set; }
+        public static SqlCommand Command { get; internal set; }
 
         public Livre()
         {

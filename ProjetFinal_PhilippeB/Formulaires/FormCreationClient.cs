@@ -26,5 +26,10 @@ namespace ProjetFinal_PhilippeB
         {
           
         }
+
+        private void btnCreerClient_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

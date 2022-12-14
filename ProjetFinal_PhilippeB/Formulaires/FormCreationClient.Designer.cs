@@ -202,6 +202,7 @@
             this.btnCreerClient.TabIndex = 16;
             this.btnCreerClient.Text = "Créer le client";
             this.btnCreerClient.UseVisualStyleBackColor = true;
+            this.btnCreerClient.Click += new System.EventHandler(this.btnCreerClient_Click);
             // 
             // CreationClient
             // 

@@ -46,7 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Classes\SqlClient.cs" />
+    <Compile Include="Classes\SqlBibliotheque.cs" />
     <Compile Include="Classes\Livre.cs" />
     <Compile Include="Classes\Client.cs" />
     <Compile Include="Classes\StaticListes.cs" />
