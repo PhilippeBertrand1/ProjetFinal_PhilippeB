@@ -41,6 +41,7 @@ namespace ProjetFinal_PhilippeB
 
         }
 
+        
         private void btnEmprunter_Click(object sender, EventArgs e)
         {
             foreach(Livre liv in StaticListes.LsInventaire)

@@ -168,5 +168,10 @@ namespace ProjetFinal_PhilippeB
                 MessageBox.Show(ex.Message);
             }
         }
+
+        private void btnModifier_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

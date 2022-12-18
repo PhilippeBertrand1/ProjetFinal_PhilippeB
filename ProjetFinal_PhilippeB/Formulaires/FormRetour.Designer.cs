@@ -113,6 +113,7 @@
             this.listViewRetour.TabIndex = 8;
             this.listViewRetour.UseCompatibleStateImageBehavior = false;
             this.listViewRetour.View = System.Windows.Forms.View.Details;
+            this.listViewRetour.SelectedIndexChanged += new System.EventHandler(this.listViewRetour_SelectedIndexChanged);
             // 
             // columnIdentifiant
             // 

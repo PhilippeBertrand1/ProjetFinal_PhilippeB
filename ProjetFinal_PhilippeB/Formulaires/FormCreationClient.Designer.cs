@@ -290,6 +290,7 @@
             this.btnModifier.TabIndex = 45;
             this.btnModifier.Text = "Modifier";
             this.btnModifier.UseVisualStyleBackColor = true;
+            this.btnModifier.Click += new System.EventHandler(this.btnModifier_Click);
             // 
             // lblErreurIDClient
             // 
@@ -365,7 +366,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(984, 561);
+            this.ClientSize = new System.Drawing.Size(880, 492);
             this.Controls.Add(this.btnSaveClients);
             this.Controls.Add(this.txtMdpAdmin);
             this.Controls.Add(this.label2);
@@ -397,7 +398,6 @@
             this.MaximizeBox = false;
             this.Name = "CreationClient";
             this.Text = "Création d\'un client";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.CreationClient_Load);
             this.gbxSexeClient.ResumeLayout(false);
             this.gbxSexeClient.PerformLayout();

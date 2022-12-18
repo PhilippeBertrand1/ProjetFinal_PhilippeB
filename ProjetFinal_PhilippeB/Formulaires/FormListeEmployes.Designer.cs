@@ -139,9 +139,9 @@
             // 
             this.btnRechercher.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRechercher.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.btnRechercher.Location = new System.Drawing.Point(522, 97);
+            this.btnRechercher.Location = new System.Drawing.Point(484, 97);
             this.btnRechercher.Name = "btnRechercher";
-            this.btnRechercher.Size = new System.Drawing.Size(165, 62);
+            this.btnRechercher.Size = new System.Drawing.Size(157, 62);
             this.btnRechercher.TabIndex = 9;
             this.btnRechercher.Text = "Rechercher";
             this.btnRechercher.UseVisualStyleBackColor = true;
