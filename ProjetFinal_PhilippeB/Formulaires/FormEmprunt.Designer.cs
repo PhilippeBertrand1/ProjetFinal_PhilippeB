@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EmpruntLivre));
             this.lblEmprunt = new System.Windows.Forms.Label();
             this.lblEmpruntLivre = new System.Windows.Forms.Label();
             this.txtIdEmprunt = new System.Windows.Forms.TextBox();
@@ -126,6 +127,7 @@
             this.Controls.Add(this.txtIdEmprunt);
             this.Controls.Add(this.lblEmpruntLivre);
             this.Controls.Add(this.lblEmprunt);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "EmpruntLivre";
             this.Text = "Emprunt d\'un livre";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RetourLivre));
             this.lblTitreRetour = new System.Windows.Forms.Label();
             this.lblListeLivresEmprunt = new System.Windows.Forms.Label();
             this.txtIdClientRetour = new System.Windows.Forms.TextBox();
@@ -46,6 +47,7 @@
             // 
             this.lblTitreRetour.AutoSize = true;
             this.lblTitreRetour.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitreRetour.ForeColor = System.Drawing.SystemColors.MenuHighlight;
             this.lblTitreRetour.Location = new System.Drawing.Point(272, 9);
             this.lblTitreRetour.Name = "lblTitreRetour";
             this.lblTitreRetour.Size = new System.Drawing.Size(227, 31);
@@ -56,12 +58,12 @@
             // 
             this.lblListeLivresEmprunt.AutoSize = true;
             this.lblListeLivresEmprunt.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblListeLivresEmprunt.ForeColor = System.Drawing.SystemColors.MenuHighlight;
             this.lblListeLivresEmprunt.Location = new System.Drawing.Point(237, 162);
             this.lblListeLivresEmprunt.Name = "lblListeLivresEmprunt";
             this.lblListeLivresEmprunt.Size = new System.Drawing.Size(326, 29);
             this.lblListeLivresEmprunt.TabIndex = 14;
             this.lblListeLivresEmprunt.Text = "Liste des livres empruntés ";
-            
             // 
             // txtIdClientRetour
             // 
@@ -69,7 +71,6 @@
             this.txtIdClientRetour.Name = "txtIdClientRetour";
             this.txtIdClientRetour.Size = new System.Drawing.Size(182, 20);
             this.txtIdClientRetour.TabIndex = 13;
-            
             // 
             // lblIdClientValideRetour
             // 
@@ -80,7 +81,6 @@
             this.lblIdClientValideRetour.Size = new System.Drawing.Size(243, 24);
             this.lblIdClientValideRetour.TabIndex = 12;
             this.lblIdClientValideRetour.Text = "Identifiant valide d\'un client :";
-            
             // 
             // txtIdRetour
             // 
@@ -88,7 +88,6 @@
             this.txtIdRetour.Name = "txtIdRetour";
             this.txtIdRetour.Size = new System.Drawing.Size(202, 20);
             this.txtIdRetour.TabIndex = 10;
-          
             // 
             // lblRetourLivre
             // 
@@ -99,7 +98,6 @@
             this.lblRetourLivre.Size = new System.Drawing.Size(199, 25);
             this.lblRetourLivre.TabIndex = 9;
             this.lblRetourLivre.Text = "Identifiant du livre : ";
-            
             // 
             // listViewRetour
             // 
@@ -115,7 +113,6 @@
             this.listViewRetour.TabIndex = 8;
             this.listViewRetour.UseCompatibleStateImageBehavior = false;
             this.listViewRetour.View = System.Windows.Forms.View.Details;
-    
             // 
             // columnIdentifiant
             // 
@@ -140,6 +137,7 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.button1.Location = new System.Drawing.Point(585, 65);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(136, 53);
@@ -161,9 +159,11 @@
             this.Controls.Add(this.lblRetourLivre);
             this.Controls.Add(this.listViewRetour);
             this.Controls.Add(this.lblTitreRetour);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "RetourLivre";
             this.Text = "Retour d\'un livre";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.RetourLivre_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

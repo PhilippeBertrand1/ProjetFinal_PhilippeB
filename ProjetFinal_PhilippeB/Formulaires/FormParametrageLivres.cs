@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Text.RegularExpressions;
 
 
 namespace ProjetFinal_PhilippeB
@@ -24,7 +25,48 @@ namespace ProjetFinal_PhilippeB
         {
 
         }
+        public void ViderChamps()
+        {
+            txtTitre.Text = "";
+            txtIdLivre.Text = "";
+            txtAnneParution.Text = "";
+            txtAuteur.Text = "";
+            txtMdpAdmin.Text = "";
 
+        }
+            
+        public bool VerifierRegex(string modele, TextBox txt, Label lbl, string messageErreur) //Paramètres voulus lorsqu'on appelle la fonction
+        {
+            //Création du Regex reg 
+            Regex reg = new Regex(modele);
+
+            if (!reg.IsMatch(txt.Text))
+            {
+                //Afficher un message d'erreur
+                lbl.ForeColor = Color.Red;
+                lbl.Text = messageErreur;
+                //Effacer la TextBox 
+                txt.Clear();
+                return false;
+            }
+            else lbl.Text = ""; //Effacer le label si le champ entré est valide
+            return true;
+        }
+
+        public bool VerificationTous()
+        {
+            bool b_id, b_titre, b_auteur, b_anneeparution, b_mdpAdmin;
+
+            b_id = VerifierRegex("^[0-9]{2}$", txtIdLivre, lblErreurLivreID, "2 chiffres obligatoire");
+            b_titre = VerifierRegex("^[A-Z]{1}[a-z]{1,40}", txtTitre, lblErreurTitre, "Une lettre majuscule en premier obligatoire, 40 caractères maximum");
+            b_auteur = VerifierRegex("^[A-Z]{1}[a-z]{1,40}", txtAuteur, lblErreurAuteur, "Il faut un espace entre le nom et le prénom");
+            b_anneeparution = VerifierRegex("^[1900-2022]{4}$", txtAnneParution, lblErreurAnneeParution, "L'année de parution doit être de 4 caractères obligatoire et entre 1900 et 2022");
+            b_mdpAdmin = VerifierRegex("Admin", txtMdpAdmin, lblErreurMdpAdminLivre, "Mot de passe admin incorrect");
+
+            if (b_id && b_titre && b_auteur && b_anneeparution && b_mdpAdmin)
+                return true;
+            else return false;
+        }
         private void AjouterSupprimerModifierLivres_Load(object sender, EventArgs e)
         {
             Livres = new SqlBibliotheque();
@@ -39,7 +81,7 @@ namespace ProjetFinal_PhilippeB
 
         private void btnAjouterLivre_Click(object sender, EventArgs e)
         {
-            if (txtMdpAdmin.Text == "Admin")
+            if (VerificationTous())
             {
                 DataRow UnLivre = Livres.DtLivre.NewRow();
                 UnLivre[0] = txtIdLivre.Text.Trim();
@@ -51,14 +93,9 @@ namespace ProjetFinal_PhilippeB
                 Livre liv = new Livre(txtIdLivre.Text,txtTitre.Text,txtAuteur.Text, int.Parse(txtAnneParution.Text), DateTime.Now,DateTime.Now);
                 StaticListes.LsInventaire.Add(liv);
                 MessageBox.Show("Le livre a été ajouté avec succès !", "Message");
+                ViderChamps();
                
             }
-
-            else
-            {
-                MessageBox.Show("Attention le mot de passe admin est incorrect, veuillez re-essayez");
-            }
-
         }
 
         private void btnModifierLivre_Click(object sender, EventArgs e)
@@ -128,5 +165,27 @@ namespace ProjetFinal_PhilippeB
                 MessageBox.Show(ex.Message);
             }
         }
+        int navigation = 0;
+        private void btnSuivant_Click(object sender, EventArgs e)
+        {
+            if (dataGridViewLivreCreation.Rows.Count > 0)
+            {
+                dataGridViewLivreCreation.ClearSelection();
+                dataGridViewLivreCreation.Rows[navigation + 1].Selected = true;
+                navigation++;
+            }
+        }
+
+        private void btnPrecedent_Click(object sender, EventArgs e)
+        {
+            if (navigation > 0)
+            {
+                dataGridViewLivreCreation.ClearSelection();
+                dataGridViewLivreCreation.Rows[navigation - 1].Selected = true;
+                navigation--;
+            }
+        }
+
+       
     }
 }

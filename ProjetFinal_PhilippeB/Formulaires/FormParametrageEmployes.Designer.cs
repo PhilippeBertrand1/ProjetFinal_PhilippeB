@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AjouterSupprimerModifierEmployes));
             this.lblParametrageEmployes = new System.Windows.Forms.Label();
             this.btnCreerEmploye = new System.Windows.Forms.Button();
             this.dateTimePickerEmploye = new System.Windows.Forms.DateTimePicker();
@@ -64,16 +65,18 @@
             // lblParametrageEmployes
             // 
             this.lblParametrageEmployes.AutoSize = true;
-            this.lblParametrageEmployes.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblParametrageEmployes.Location = new System.Drawing.Point(219, 9);
+            this.lblParametrageEmployes.Font = new System.Drawing.Font("MS Reference Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblParametrageEmployes.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.lblParametrageEmployes.Location = new System.Drawing.Point(207, 9);
             this.lblParametrageEmployes.Name = "lblParametrageEmployes";
-            this.lblParametrageEmployes.Size = new System.Drawing.Size(368, 31);
+            this.lblParametrageEmployes.Size = new System.Drawing.Size(408, 34);
             this.lblParametrageEmployes.TabIndex = 0;
             this.lblParametrageEmployes.Text = "Paramètrage des employés";
             // 
             // btnCreerEmploye
             // 
             this.btnCreerEmploye.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCreerEmploye.ForeColor = System.Drawing.SystemColors.Highlight;
             this.btnCreerEmploye.Location = new System.Drawing.Point(561, 190);
             this.btnCreerEmploye.Name = "btnCreerEmploye";
             this.btnCreerEmploye.Size = new System.Drawing.Size(149, 62);
@@ -214,6 +217,7 @@
             // btnModifierEmploye
             // 
             this.btnModifierEmploye.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnModifierEmploye.ForeColor = System.Drawing.Color.Fuchsia;
             this.btnModifierEmploye.Location = new System.Drawing.Point(561, 277);
             this.btnModifierEmploye.Name = "btnModifierEmploye";
             this.btnModifierEmploye.Size = new System.Drawing.Size(149, 62);
@@ -225,6 +229,7 @@
             // btnSupprimerEmploye
             // 
             this.btnSupprimerEmploye.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSupprimerEmploye.ForeColor = System.Drawing.Color.Red;
             this.btnSupprimerEmploye.Location = new System.Drawing.Point(561, 368);
             this.btnSupprimerEmploye.Name = "btnSupprimerEmploye";
             this.btnSupprimerEmploye.Size = new System.Drawing.Size(149, 61);
@@ -237,6 +242,7 @@
             // 
             this.rbHomme.AutoSize = true;
             this.rbHomme.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbHomme.ForeColor = System.Drawing.SystemColors.Highlight;
             this.rbHomme.Location = new System.Drawing.Point(213, 5);
             this.rbHomme.Name = "rbHomme";
             this.rbHomme.Size = new System.Drawing.Size(83, 24);
@@ -249,6 +255,7 @@
             // 
             this.rbFemme.AutoSize = true;
             this.rbFemme.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbFemme.ForeColor = System.Drawing.Color.Fuchsia;
             this.rbFemme.Location = new System.Drawing.Point(302, 7);
             this.rbFemme.Name = "rbFemme";
             this.rbFemme.Size = new System.Drawing.Size(81, 24);
@@ -365,6 +372,7 @@
             this.Controls.Add(this.lblIdendifiantEmploye);
             this.Controls.Add(this.lblParametrageEmployes);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "AjouterSupprimerModifierEmployes";
             this.Text = "Ajouter / Supprimer / Modifier employés";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;

@@ -44,6 +44,7 @@ namespace ProjetFinal_PhilippeB
         {
             CreationClient formCreationClient = new CreationClient(); // Création d'une instance 
             formCreationClient.MdiParent = this; // définir le formulaire parent
+            formCreationClient.Size = new Size(1100, 600);
             formCreationClient.Show(); // affichage du formulaire enfant
             label1.Hide();
         }

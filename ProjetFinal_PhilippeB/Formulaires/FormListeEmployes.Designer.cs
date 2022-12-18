@@ -28,111 +28,143 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ListeEmployes));
             this.lblListeEmployes = new System.Windows.Forms.Label();
-            this.dataGridViewEmployes = new System.Windows.Forms.DataGridView();
-            this.ColumnDataIdClient = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnDataPrenomClient = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnDataNomClient = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnDataTelClient = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnDataSexeClient = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnDataAdresseClient = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewEmployes)).BeginInit();
+            this.listViewEmp = new System.Windows.Forms.ListView();
+            this.ID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.lblMoteurRecherche = new System.Windows.Forms.Label();
+            this.cbxRecherche = new System.Windows.Forms.ComboBox();
+            this.txtRecherche = new System.Windows.Forms.TextBox();
+            this.lblRecherche = new System.Windows.Forms.Label();
+            this.btnRechercher = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblListeEmployes
             // 
             this.lblListeEmployes.AutoSize = true;
-            this.lblListeEmployes.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblListeEmployes.Location = new System.Drawing.Point(168, 69);
+            this.lblListeEmployes.Font = new System.Drawing.Font("MS Reference Sans Serif", 36F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblListeEmployes.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.lblListeEmployes.Location = new System.Drawing.Point(142, 9);
             this.lblListeEmployes.Name = "lblListeEmployes";
-            this.lblListeEmployes.Size = new System.Drawing.Size(478, 55);
+            this.lblListeEmployes.Size = new System.Drawing.Size(530, 60);
             this.lblListeEmployes.TabIndex = 3;
             this.lblListeEmployes.Text = "Listes des employés";
             // 
-            // dataGridViewEmployes
+            // listViewEmp
             // 
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewEmployes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dataGridViewEmployes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewEmployes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.ColumnDataIdClient,
-            this.ColumnDataPrenomClient,
-            this.ColumnDataNomClient,
-            this.ColumnDataTelClient,
-            this.ColumnDataSexeClient,
-            this.ColumnDataAdresseClient});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewEmployes.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGridViewEmployes.Location = new System.Drawing.Point(65, 151);
-            this.dataGridViewEmployes.Name = "dataGridViewEmployes";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewEmployes.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.dataGridViewEmployes.Size = new System.Drawing.Size(670, 232);
-            this.dataGridViewEmployes.TabIndex = 2;
+            this.listViewEmp.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.ID,
+            this.columnHeader1,
+            this.columnHeader2,
+            this.columnHeader3,
+            this.columnHeader4,
+            this.columnHeader5});
+            this.listViewEmp.HideSelection = false;
+            this.listViewEmp.Location = new System.Drawing.Point(98, 174);
+            this.listViewEmp.Name = "listViewEmp";
+            this.listViewEmp.Size = new System.Drawing.Size(608, 244);
+            this.listViewEmp.TabIndex = 4;
+            this.listViewEmp.UseCompatibleStateImageBehavior = false;
+            this.listViewEmp.View = System.Windows.Forms.View.Details;
             // 
-            // ColumnDataIdClient
+            // ID
             // 
-            this.ColumnDataIdClient.HeaderText = "Identifiant";
-            this.ColumnDataIdClient.Name = "ColumnDataIdClient";
+            this.ID.Text = "ID";
             // 
-            // ColumnDataPrenomClient
+            // columnHeader1
             // 
-            this.ColumnDataPrenomClient.HeaderText = "Prénom";
-            this.ColumnDataPrenomClient.Name = "ColumnDataPrenomClient";
+            this.columnHeader1.Text = "Prenom";
+            this.columnHeader1.Width = 123;
             // 
-            // ColumnDataNomClient
+            // columnHeader2
             // 
-            this.ColumnDataNomClient.HeaderText = "Nom";
-            this.ColumnDataNomClient.Name = "ColumnDataNomClient";
+            this.columnHeader2.Text = "Nom";
+            this.columnHeader2.Width = 132;
             // 
-            // ColumnDataTelClient
+            // columnHeader3
             // 
-            this.ColumnDataTelClient.HeaderText = "Num. Tel";
-            this.ColumnDataTelClient.Name = "ColumnDataTelClient";
+            this.columnHeader3.Text = "Telephone";
+            this.columnHeader3.Width = 134;
             // 
-            // ColumnDataSexeClient
+            // columnHeader4
             // 
-            this.ColumnDataSexeClient.HeaderText = "Sexe";
-            this.ColumnDataSexeClient.Name = "ColumnDataSexeClient";
+            this.columnHeader4.Text = "Sexe";
             // 
-            // ColumnDataAdresseClient
+            // columnHeader5
             // 
-            this.ColumnDataAdresseClient.HeaderText = "Adresse";
-            this.ColumnDataAdresseClient.Name = "ColumnDataAdresseClient";
+            this.columnHeader5.Text = "Taux horaire";
+            this.columnHeader5.Width = 88;
+            // 
+            // lblMoteurRecherche
+            // 
+            this.lblMoteurRecherche.AutoSize = true;
+            this.lblMoteurRecherche.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMoteurRecherche.Location = new System.Drawing.Point(98, 99);
+            this.lblMoteurRecherche.Name = "lblMoteurRecherche";
+            this.lblMoteurRecherche.Size = new System.Drawing.Size(164, 20);
+            this.lblMoteurRecherche.TabIndex = 5;
+            this.lblMoteurRecherche.Text = "Moteur de recherche :";
+            // 
+            // cbxRecherche
+            // 
+            this.cbxRecherche.FormattingEnabled = true;
+            this.cbxRecherche.Location = new System.Drawing.Point(269, 97);
+            this.cbxRecherche.Name = "cbxRecherche";
+            this.cbxRecherche.Size = new System.Drawing.Size(177, 21);
+            this.cbxRecherche.TabIndex = 6;
+            // 
+            // txtRecherche
+            // 
+            this.txtRecherche.Location = new System.Drawing.Point(269, 141);
+            this.txtRecherche.Name = "txtRecherche";
+            this.txtRecherche.Size = new System.Drawing.Size(177, 20);
+            this.txtRecherche.TabIndex = 7;
+            // 
+            // lblRecherche
+            // 
+            this.lblRecherche.AutoSize = true;
+            this.lblRecherche.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRecherche.Location = new System.Drawing.Point(98, 141);
+            this.lblRecherche.Name = "lblRecherche";
+            this.lblRecherche.Size = new System.Drawing.Size(167, 20);
+            this.lblRecherche.TabIndex = 8;
+            this.lblRecherche.Text = "Donnée à rechercher :";
+            // 
+            // btnRechercher
+            // 
+            this.btnRechercher.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRechercher.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.btnRechercher.Location = new System.Drawing.Point(522, 97);
+            this.btnRechercher.Name = "btnRechercher";
+            this.btnRechercher.Size = new System.Drawing.Size(165, 62);
+            this.btnRechercher.TabIndex = 9;
+            this.btnRechercher.Text = "Rechercher";
+            this.btnRechercher.UseVisualStyleBackColor = true;
+            this.btnRechercher.Click += new System.EventHandler(this.btnRechercher_Click);
             // 
             // ListeEmployes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnRechercher);
+            this.Controls.Add(this.lblRecherche);
+            this.Controls.Add(this.txtRecherche);
+            this.Controls.Add(this.cbxRecherche);
+            this.Controls.Add(this.lblMoteurRecherche);
+            this.Controls.Add(this.listViewEmp);
             this.Controls.Add(this.lblListeEmployes);
-            this.Controls.Add(this.dataGridViewEmployes);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ListeEmployes";
             this.Text = "Liste des employés";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewEmployes)).EndInit();
+            this.Load += new System.EventHandler(this.ListeEmployes_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -141,12 +173,17 @@
         #endregion
 
         private System.Windows.Forms.Label lblListeEmployes;
-        private System.Windows.Forms.DataGridView dataGridViewEmployes;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnDataIdClient;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnDataPrenomClient;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnDataNomClient;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnDataTelClient;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnDataSexeClient;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnDataAdresseClient;
+        private System.Windows.Forms.ListView listViewEmp;
+        private System.Windows.Forms.ColumnHeader ID;
+        private System.Windows.Forms.ColumnHeader columnHeader1;
+        private System.Windows.Forms.ColumnHeader columnHeader2;
+        private System.Windows.Forms.ColumnHeader columnHeader3;
+        private System.Windows.Forms.ColumnHeader columnHeader4;
+        private System.Windows.Forms.ColumnHeader columnHeader5;
+        private System.Windows.Forms.Label lblMoteurRecherche;
+        private System.Windows.Forms.ComboBox cbxRecherche;
+        private System.Windows.Forms.TextBox txtRecherche;
+        private System.Windows.Forms.Label lblRecherche;
+        private System.Windows.Forms.Button btnRechercher;
     }
 }

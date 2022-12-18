@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ListeClients));
             this.dataGridViewClients = new System.Windows.Forms.DataGridView();
             this.ColumnDataIdClient = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnDataPrenomClient = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -88,6 +89,7 @@
             // 
             this.lblListeClients.AutoSize = true;
             this.lblListeClients.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblListeClients.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.lblListeClients.Location = new System.Drawing.Point(185, 87);
             this.lblListeClients.Name = "lblListeClients";
             this.lblListeClients.Size = new System.Drawing.Size(406, 55);
@@ -101,6 +103,7 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.lblListeClients);
             this.Controls.Add(this.dataGridViewClients);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ListeClients";
             this.Text = "Listes des clients";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;

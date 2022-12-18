@@ -8,13 +8,13 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace ProjetFinal_PhilippeB
 {
     public partial class AjouterSupprimerModifierEmployes : Form
     {
-
-        
+        List<Employe> LsEmployes = new List<Employe>();
           
         public AjouterSupprimerModifierEmployes()
         {
@@ -93,6 +93,7 @@ namespace ProjetFinal_PhilippeB
                 Employe emp = new Employe(txtIdentifiantEmploye.Text, txtPrenomEmploye.Text, txtNomEmploye.Text, txtTelEmploye.Text,
                     dateTimePickerEmploye.Value.Date, SexeButton(rbHomme, rbFemme), int.Parse(txtTauxHoraire.Text));
                 StaticListes.LsEmployes.Add(emp);
+                
                 MessageBox.Show("L'employé a été ajouté avec succès.", "Bienvenue parmi nous !");
                 SupprimerChamps();
             }      
@@ -119,7 +120,7 @@ namespace ProjetFinal_PhilippeB
         private void btnSupprimerEmploye_Click(object sender, EventArgs e)
         {
             if (txtMdpAdmin2.Text == "Admin")
-            foreach (Employe emp in StaticListes.LsEmployes)
+                foreach (Employe emp in StaticListes.LsEmployes)
                 if (emp.NumIdentifiant == txtIdentifiantEmploye.Text)
                 {
                     StaticListes.LsEmployes.Remove(emp);
@@ -133,8 +134,13 @@ namespace ProjetFinal_PhilippeB
                 }
             else
             {
-                MessageBox.Show("Mot de passe admin incorrect! Veuillez re - essayez", "Erreur, attention");
+                MessageBox.Show("Mot de passe admin incorrect! Veuillez re-essayez", "Erreur, attention");
             }
         }
+
+      
+
+        
+        
     }
 }
