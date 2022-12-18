@@ -171,7 +171,39 @@ namespace ProjetFinal_PhilippeB
 
         private void btnModifier_Click(object sender, EventArgs e)
         {
+            if (VerifierTous())
+            {
+                foreach (DataRow row in Clients.DtClient.Rows)
+                {
+                    if (row[0].ToString() == txtIdentifiantClient.Text)
+                    {
+                        row[0] = txtIdentifiantClient.Text.Trim();
+                        row[1] = txtPrenomClient.Text.Trim();
+                        row[2] = txtNomClient.Text.Trim();
+                        row[3] = txtTelClient.Text.Trim();
+                        row[4] = SexeButton(rbFemmeClient, rbHommeClient);
+                        row[5] = txtAdresseClient.Text.Trim();
 
+                        MessageBox.Show("Le client a été modifié avec succès");
+                    }
+                    else
+                    {
+                        MessageBox.Show("L'utilisateur n'existe pas !", "Attention !");
+                    }
+                }
+                
+                /*foreach (Client clients in StaticListes.LsClients)
+
+                  if (clients.NumIdentifiant == txtIdentifiantClient.Text)
+                    {
+                        StaticListes.LsClients.Remove(clients);
+                        Client cli = new Client(txtIdentifiantClient.Text, txtPrenomClient.Text, txtNomClient.Text, txtTelClient.Text,
+                        dateTimePickerClient.Value.Date, SexeButton(rbHommeClient, rbFemmeClient), txtAdresseClient.Text);
+                        StaticListes.LsClients.Add(cli);
+                        SupprimerChamps();
+                    }*/
+            }
+            
         }
     }
 }

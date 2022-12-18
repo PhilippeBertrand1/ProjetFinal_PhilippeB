@@ -15,6 +15,12 @@
     {
         "Entry"
         {
+        "MsmKey" = "8:_5B3134F223804349B5AC2052E1BFC35D"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_9D75F2E5BD2442C2939503F0D2311755"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -34,13 +40,13 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_FA4F112A169A5EC94F52016E10A96096"
+        "OwnerKey" = "8:_9D75F2E5BD2442C2939503F0D2311755"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_9D75F2E5BD2442C2939503F0D2311755"
+        "OwnerKey" = "8:_FA4F112A169A5EC94F52016E10A96096"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -61,6 +67,14 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+            }
         }
         "Release"
         {
@@ -77,6 +91,14 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+            }
         }
     }
     "Deployable"
@@ -106,6 +128,26 @@
         }
         "File"
         {
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_5B3134F223804349B5AC2052E1BFC35D"
+            {
+            "SourcePath" = "8:books_21813.ico"
+            "TargetName" = "8:books_21813.ico"
+            "Tag" = "8:"
+            "Folder" = "8:_73B20414325A431CA822A7C9EF752FA1"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_BDFD8EBD32FF4877B446085C71533B56"
             {
             "SourcePath" = "8:..\\..\\books_21813.ico"
@@ -350,7 +392,7 @@
             }
             "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_8A6E73A6462C4A2E8D629119254F02D9"
             {
-            "Name" = "8:Bibliothque_Menu"
+            "Name" = "8:Bibliotheque_Menu"
             "Arguments" = "8:"
             "Description" = "8:"
             "ShowCmd" = "3:1"
@@ -373,7 +415,7 @@
             "Target" = "8:_9D75F2E5BD2442C2939503F0D2311755"
             "Folder" = "8:_73B20414325A431CA822A7C9EF752FA1"
             "WorkingFolder" = "8:_6CA1DAE35BBF41718BA89C0FA382A6EC"
-            "Icon" = "8:"
+            "Icon" = "8:_5B3134F223804349B5AC2052E1BFC35D"
             "Feature" = "8:"
             }
         }
@@ -777,7 +819,7 @@
         {
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_9D75F2E5BD2442C2939503F0D2311755"
             {
-            "SourcePath" = "8:..\\ProjetFinal_PhilippeB\\obj\\Release\\ProjetFinal_PhilippeB.exe"
+            "SourcePath" = "8:"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_6CA1DAE35BBF41718BA89C0FA382A6EC"

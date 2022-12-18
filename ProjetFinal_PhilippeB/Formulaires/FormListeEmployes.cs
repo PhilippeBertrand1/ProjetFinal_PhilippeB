@@ -51,6 +51,7 @@ namespace ProjetFinal_PhilippeB
             i = new ListViewItem(arr);
             //Ajouter l'item dans la listView en question
             listViewEmp.Items.Add(i);
+            lblResultat.Text = listViewEmp.Items.Count.ToString();
         }
 
         private void btnRechercher_Click(object sender, EventArgs e)

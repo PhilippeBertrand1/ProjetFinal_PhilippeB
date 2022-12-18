@@ -45,16 +45,21 @@ namespace ProjetFinal_PhilippeB
         private void btnEmprunter_Click(object sender, EventArgs e)
         {
             foreach(Livre liv in StaticListes.LsInventaire)
+            
                 if (liv.LivreID == txtIdEmprunt.Text)
                 {
-                    foreach (Client client in StaticListes.LsClients)
-                        if (client.NumIdentifiant == txtIdEmprunt.Text)
-                        {
-                            StaticListes.LsInventaire.Remove(liv);
-                            StaticListes.LsLivresEmpruntes.Add(liv);
+                    //foreach (Client client in StaticListes.LsClients)
+                    //if (client.NumIdentifiant == txtIdEmprunt.Text)
+                    // {
+                    StaticListes.LsInventaire.Remove(liv);
+                    StaticListes.LsLivresEmpruntes.Add(liv);
 
-                            MessageBox.Show("Le livre sélectionné est à vous !", "Bonne lecture");
-                        }
+                    MessageBox.Show("Le livre sélectionné est à vous !", "Bonne lecture");
+                    //}
+                }
+                else
+                {
+                    MessageBox.Show("Le livre n'existe pas.", "Attention !");
                 }
         }
     }

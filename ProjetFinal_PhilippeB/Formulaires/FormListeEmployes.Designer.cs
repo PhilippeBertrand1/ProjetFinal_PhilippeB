@@ -42,6 +42,8 @@
             this.txtRecherche = new System.Windows.Forms.TextBox();
             this.lblRecherche = new System.Windows.Forms.Label();
             this.btnRechercher = new System.Windows.Forms.Button();
+            this.lblNbResultats = new System.Windows.Forms.Label();
+            this.lblResultat = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblListeEmployes
@@ -65,7 +67,7 @@
             this.columnHeader4,
             this.columnHeader5});
             this.listViewEmp.HideSelection = false;
-            this.listViewEmp.Location = new System.Drawing.Point(98, 174);
+            this.listViewEmp.Location = new System.Drawing.Point(92, 167);
             this.listViewEmp.Name = "listViewEmp";
             this.listViewEmp.Size = new System.Drawing.Size(608, 244);
             this.listViewEmp.TabIndex = 4;
@@ -104,7 +106,7 @@
             // 
             this.lblMoteurRecherche.AutoSize = true;
             this.lblMoteurRecherche.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMoteurRecherche.Location = new System.Drawing.Point(98, 99);
+            this.lblMoteurRecherche.Location = new System.Drawing.Point(99, 98);
             this.lblMoteurRecherche.Name = "lblMoteurRecherche";
             this.lblMoteurRecherche.Size = new System.Drawing.Size(164, 20);
             this.lblMoteurRecherche.TabIndex = 5;
@@ -147,11 +149,33 @@
             this.btnRechercher.UseVisualStyleBackColor = true;
             this.btnRechercher.Click += new System.EventHandler(this.btnRechercher_Click);
             // 
+            // lblNbResultats
+            // 
+            this.lblNbResultats.AutoSize = true;
+            this.lblNbResultats.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNbResultats.Location = new System.Drawing.Point(92, 418);
+            this.lblNbResultats.Name = "lblNbResultats";
+            this.lblNbResultats.Size = new System.Drawing.Size(255, 20);
+            this.lblNbResultats.TabIndex = 10;
+            this.lblNbResultats.Text = "Nombre de résultats trouvées :";
+            // 
+            // lblResultat
+            // 
+            this.lblResultat.AutoSize = true;
+            this.lblResultat.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblResultat.ForeColor = System.Drawing.Color.Red;
+            this.lblResultat.Location = new System.Drawing.Point(353, 419);
+            this.lblResultat.Name = "lblResultat";
+            this.lblResultat.Size = new System.Drawing.Size(0, 20);
+            this.lblResultat.TabIndex = 11;
+            // 
             // ListeEmployes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.lblResultat);
+            this.Controls.Add(this.lblNbResultats);
             this.Controls.Add(this.btnRechercher);
             this.Controls.Add(this.lblRecherche);
             this.Controls.Add(this.txtRecherche);
@@ -185,5 +209,7 @@
         private System.Windows.Forms.TextBox txtRecherche;
         private System.Windows.Forms.Label lblRecherche;
         private System.Windows.Forms.Button btnRechercher;
+        private System.Windows.Forms.Label lblNbResultats;
+        private System.Windows.Forms.Label lblResultat;
     }
 }
