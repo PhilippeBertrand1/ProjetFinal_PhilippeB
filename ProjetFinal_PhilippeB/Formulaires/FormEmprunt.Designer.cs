@@ -112,7 +112,7 @@
             this.dataGridViewLivre.Name = "dataGridViewLivre";
             this.dataGridViewLivre.Size = new System.Drawing.Size(588, 204);
             this.dataGridViewLivre.TabIndex = 8;
-            this.dataGridViewLivre.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewLivre_CellContentClick);
+            
             // 
             // EmpruntLivre
             // 

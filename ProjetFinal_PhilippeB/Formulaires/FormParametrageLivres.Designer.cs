@@ -85,7 +85,7 @@
             this.lblTitre.Size = new System.Drawing.Size(48, 20);
             this.lblTitre.TabIndex = 2;
             this.lblTitre.Text = "Titre :";
-            this.lblTitre.Click += new System.EventHandler(this.label3_Click);
+            
             // 
             // lblAuteur
             // 

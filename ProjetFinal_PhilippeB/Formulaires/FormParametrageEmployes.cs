@@ -20,6 +20,16 @@ namespace ProjetFinal_PhilippeB
         {
             InitializeComponent();
         }
+        /// <summary>
+        /// Méthode vérifie si la valeur donnée est conforme à l'expression régulière attribuée
+        /// La méthode demande 4 paramètres, ces paramètres on chacun un fonctionnement précis:
+        /// *Bout de code pris et modifié de l'exercise GestElection de Hasna Hocini*
+        /// </summary>
+        /// <param name="modele"></param> L'expression régulière voulue
+        /// <param name="txt"></param> Le text box à analyser
+        /// <param name="lbl"></param> Un label qui va afficher un message d'erreur
+        /// <param name="messageErreur"></param> La chaine de caractère du message d'erreur
+        /// <returns></returns>
         public bool VerifierRegex(string modele, TextBox txt, Label lbl, string messageErreur) //Paramètres voulus lorsqu'on appelle la fonction
         {
             //Création du Regex reg 
@@ -37,6 +47,15 @@ namespace ProjetFinal_PhilippeB
             else lbl.Text = ""; //Effacer le label si le champ entré est valide
             return true;
         }
+        /// <summary>
+        /// Méthode booléenne qui vérifie si l'utilisateur à bien coché l'un des deux bouton radio
+        /// Sinon, on affiche un message d'erreur
+        /// *Bout de code pris et modifié de l'exercise GestElection de Hasna Hocini*
+        /// </summary>
+        /// <param name="rb1"></param> Représente un bouton radio
+        /// <param name="rb2"></param> Représente un second bouton radio
+        /// <param name="lb"></param> Représente un label qui contient le message d'erreur
+        /// <returns></returns>
         public bool VerifierRadioButton(RadioButton rb1, RadioButton rb2, Label lb)
         {
             //Si l'utilisateur a coché un genre  
@@ -44,6 +63,12 @@ namespace ProjetFinal_PhilippeB
             else // Sinon afficher un message d'erreur
             { lb.ForeColor = Color.Red; lb.Text = "Selectionnez un sexe"; return false; }
         }
+        /// <summary>
+        /// Méthode booléene qui va être demandé à chaque ajout d'un employé
+        /// Si toutes la validations sont acceptées, on laisse ajouter le nouveau employé, sinon une erreur s'affiche selon la validation non-conforme
+        /// *Bout de code pris, modifié et adapter de l'exercice "GestElection" par Hasna Hocini*
+        /// </summary>
+        /// <returns></returns>
         public bool VerifierTous()
         {
             //Déclaration des booléens de validation des informations entrées
@@ -64,7 +89,9 @@ namespace ProjetFinal_PhilippeB
                 return true;
             else return false; //Sinon retourner faux
         }
-
+        /// <summary>
+        /// Méthode qui vide tous les champs du formulaire
+        /// </summary>
         public void SupprimerChamps()
         {
             txtIdentifiantEmploye.Text = "";
@@ -77,31 +104,50 @@ namespace ProjetFinal_PhilippeB
             rbFemme.Checked = false;
             rbHomme.Checked = false;
         }
-
+        /// <summary>
+        /// Méthode de type char qui renvoie un charactère soit 'H' ou 'F' qui correspond à Homme ou Femme
+        /// </summary>
+        /// <param name="rb1"></param> Définie un bouton radio et renvoie la valeur H ou F
+        /// <param name="rb2"></param> Définie un second bouton radio et renvoie la valeur H ou F
+        /// <returns></returns>
         public char SexeButton(RadioButton rb1, RadioButton rb2)
         {
-            //Si la radioButton 1 est coché le genre est féminin
+            //Si la radioButton 1 est coché le genre est masculin
             if (rb1.Checked == true) return 'H';
-            else return 'F'; // Sinon il est masculin
+            else return 'F'; // Sinon il est féminin
 
         }
-
+        /// <summary>
+        /// Bouton qui ajoute un employé
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnCreerEmploye_Click(object sender, EventArgs e)
         {
+            //Appel de la fonction des Regex pour valider les données entrées
             if (VerifierTous())
             {
+                // Ajouter l'employé dans la liste lsEmployes
                 Employe emp = new Employe(txtIdentifiantEmploye.Text, txtPrenomEmploye.Text, txtNomEmploye.Text, txtTelEmploye.Text,
                     dateTimePickerEmploye.Value.Date, SexeButton(rbHomme, rbFemme), int.Parse(txtTauxHoraire.Text));
                 StaticListes.LsEmployes.Add(emp);
                 
+                // Message qui informe la confirmation de l'ajout de l'employé
                 MessageBox.Show("L'employé a été ajouté avec succès.", "Bienvenue parmi nous !");
+                
+                // On supprime tous les champs suite à l'ajout
                 SupprimerChamps();
             }      
            
         }
-
+        /// <summary>
+        /// Bouton qui permet la modification d'un employé
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnModifierEmploye_Click(object sender, EventArgs e)
         {
+            //Appel de la fonction des Regex pour valider les données entrées
             if (VerifierTous())
             foreach (Employe emp in StaticListes.LsEmployes)
                     if(emp.NumIdentifiant == txtIdentifiantEmploye.Text)
@@ -111,29 +157,41 @@ namespace ProjetFinal_PhilippeB
                             dateTimePickerEmploye.Value.Date, SexeButton(rbHomme, rbFemme), int.Parse(txtTauxHoraire.Text));
                         StaticListes.LsEmployes.Add(NewEmp);
                         SupprimerChamps();
+                        
+                        // Afficher à l'utilisateur toutes les nouvelles informations de l'employé
+
                         MessageBox.Show("L'employé a été modifié avec succès." + "\n" + "Voici les informations modifiées :" + "\n" + NewEmp.Nom + "\n" +
                         NewEmp.Prenom + "\n" + NewEmp.DateNaissance + "\n" + NewEmp.NumTelephone + "\n" + NewEmp.TauxHoraire + "\n" + NewEmp.Sexe);
 
                     }
         }
-
+        /// <summary>
+        /// Bouton qui supprime un employé
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnSupprimerEmploye_Click(object sender, EventArgs e)
         {
+            //Si la valeur du champ en question est égal à admin, on continue le code
             if (txtMdpAdmin2.Text == "Admin")
                 foreach (Employe emp in StaticListes.LsEmployes)
                 if (emp.NumIdentifiant == txtIdentifiantEmploye.Text)
                 {
                     StaticListes.LsEmployes.Remove(emp);
                     SupprimerChamps();
+
+                    //Message qui montre les informations de l'employé supprimé
                     MessageBox.Show("L'employé a été supprimé avec succès." + "\n" + "Voici les informations supprimées :" + "\n" + emp.Nom + "\n" +
                         emp.Prenom + "\n" + emp.DateNaissance + "\n" + emp.NumTelephone + "\n" + emp.TauxHoraire + "\n" + emp.Sexe, "Message");
                 }
                 else
                 {
+                    //Message qui informe d'une erreur rencontrée
                     MessageBox.Show("L'employé n'existe pas !", "Attention !");
                 }
             else
             {
+                // Message qui informe une erreur pour le mot de passe admin
                 MessageBox.Show("Mot de passe admin incorrect! Veuillez re-essayez", "Erreur, attention");
             }
         }

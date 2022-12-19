@@ -6,8 +6,11 @@ using System.Threading.Tasks;
 
 namespace ProjetFinal_PhilippeB
 {
+    //Création de la classe mère Personne
     public class Personne
     {
+        //Création des attributs
+
         private string numIdentifiant;
         private string prenom;
         private string nom;
@@ -15,6 +18,7 @@ namespace ProjetFinal_PhilippeB
         private DateTime dateNaissance;
         private char sexe;
 
+        // Propriétés des attributs
         public string NumIdentifiant
         {
             get { return numIdentifiant; }
@@ -47,6 +51,7 @@ namespace ProjetFinal_PhilippeB
             set { sexe = value; }         
         }
 
+        // Valeur par défaut des attributs
         public Personne()
         {
             numIdentifiant = "";
@@ -57,6 +62,7 @@ namespace ProjetFinal_PhilippeB
             sexe = '\0';
         }
 
+        // Constructeur de la classe Personne
         public Personne(string p_numIdentifiant, string p_prenom, string p_nom, string p_NumTel, DateTime p_dateNaissance, char p_sexe)
         {
             this.NumIdentifiant = p_numIdentifiant;

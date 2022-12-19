@@ -7,8 +7,11 @@ using System.Threading.Tasks;
 
 namespace ProjetFinal_PhilippeB
 {
+    // Création de la classe Livre
     public class Livre
     {
+        //Création des attributs
+
         private string livreID;
         private string titre;
         private string auteur;
@@ -16,7 +19,7 @@ namespace ProjetFinal_PhilippeB
         private DateTime dateRetour;
         private DateTime dateEmprunt;
 
-
+        //Propriétés des attributs
         public string LivreID
         {
             get { return livreID; }
@@ -48,9 +51,7 @@ namespace ProjetFinal_PhilippeB
             set { dateEmprunt = value; }
         }
 
-        public static SqlConnection Connection { get; internal set; }
-        public static SqlCommand Command { get; internal set; }
-
+        // Valeur par défaut des attributs
         public Livre()
         {
             livreID = "";
@@ -61,6 +62,7 @@ namespace ProjetFinal_PhilippeB
             dateEmprunt = DateTime.Now;
         }
 
+        // Constructeur de la classe Livre
         public Livre(string p_livreID, string p_titre, string p_auteur, int p_anneeParution, DateTime p_dateRetour, DateTime p_dateEmprunt)
         {
             this.LivreID = p_livreID;

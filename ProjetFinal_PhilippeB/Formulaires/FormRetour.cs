@@ -16,10 +16,17 @@ namespace ProjetFinal_PhilippeB
         {
             InitializeComponent();
         }
-
+        /// <summary>
+        /// Bouton pour retourner un livre, il est supprimer de la liste des livres en cours d'emprunt pour être ajouté dans la liste de l'inventaire
+        /// ** Le bouton n'est pas fonctionnel malheureusement ** (Blocage)
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void button1_Click(object sender, EventArgs e)
         {
+            // On parcours la liste des livres empruntés
             foreach (Livre liv in StaticListes.LsLivresEmpruntes)
+                // Si le livre est égal à la valeur entrée par l'utilisateur
                 if (liv.LivreID == txtIdRetour.Text)
                 {
                     foreach (Client client in StaticListes.LsClients)
@@ -28,6 +35,7 @@ namespace ProjetFinal_PhilippeB
                             StaticListes.LsInventaire.Add(liv);
                             StaticListes.LsLivresEmpruntes.Remove(liv);
 
+                            //Message qui confirme le retour d'un livre
                             MessageBox.Show("Le livre sélectionné a été retourné", "Merci pour votre retour !");
                         }
                 }
@@ -35,10 +43,18 @@ namespace ProjetFinal_PhilippeB
 
         private void RetourLivre_Load(object sender, EventArgs e)
         {
+            // On parcours la liste des employés pour ensuite les afficher
+            // dans la listView grâce à la fonction "AfficherEmployeListView"
             foreach (Livre livres in StaticListes.LsLivresEmpruntes)
-                AfficherEmployeListView(livres);
+                AfficherLivreListView(livres);
         }
-        public void AfficherEmployeListView(Livre liv) //On va chercher les attributs de la classe Etudiant pour créer le tableau
+        /// <summary>
+        /// Méthode d'affichage en tableau pour les employés dans la listView
+        /// Chaque index du tableau représente un attribut de l'employé
+        /// **Bout de code tiré de l'exercice GestElection de Hasna Hocini**
+        /// </summary>
+        /// <param name="emp"></param>
+        public void AfficherLivreListView(Livre liv) //On va chercher les attributs de la classe Livre pour créer le tableau
         {
             //Création d'un tableau pour l'affichage dans la listView
             string[] arr = new string[5];
@@ -51,10 +67,6 @@ namespace ProjetFinal_PhilippeB
             item = new ListViewItem(arr);
             //Ajouter l'item dans la listView en question
             listViewRetour.Items.Add(item);
-        }
-        private void listViewRetour_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

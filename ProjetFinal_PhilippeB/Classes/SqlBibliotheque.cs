@@ -9,8 +9,11 @@ using System.Data;
 
 namespace ProjetFinal_PhilippeB
 {
+    // Création de la classe Ado.Net "SqlBibliotheque" afin de communiquer avec la base de données
     internal class SqlBibliotheque
     {
+        // Création des attributs de la classe
+
         private SqlConnection connection;
         private SqlCommand command;
         private SqlDataAdapter adapter;
@@ -18,6 +21,8 @@ namespace ProjetFinal_PhilippeB
         private DataSet dsBibliotheque;
         private DataTable dtLivre;
         private DataTable dtClient;
+
+        //Propriétés des attributs
 
         public SqlConnection Connection { get => connection; set => connection = value; }
         public SqlCommand Command { get => command; set => command = value; }
@@ -27,7 +32,7 @@ namespace ProjetFinal_PhilippeB
         public DataTable DtLivre { get => dtLivre; set => dtLivre = value; }
         public DataTable DtClient { get => dtClient; set => dtClient = value; }
 
-
+        // Constructeur de la classe SqlBibliotheque
         public SqlBibliotheque()
         {
             connectionString = "Data Source=C-JUMLM81NI4BIK;Initial Catalog=Bibliotheque;User ID=sa;Password=sql";
@@ -38,7 +43,5 @@ namespace ProjetFinal_PhilippeB
             dtLivre = new DataTable();
             dtClient = new DataTable();
         }
-
-        
     }
 }

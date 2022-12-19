@@ -6,13 +6,17 @@ using System.Threading.Tasks;
 
 namespace ProjetFinal_PhilippeB
 {
+    // Création de la classe statique StaticListes
     public static class StaticListes
     {
+        //Création des attributs
+
         private static List<Employe> lsEmployes;
         private static List<Client> lsClients;
         private static List<Livre> lsInventaire;
         private static List<Livre> lsLivresEmpruntes;
 
+        // Propriétés des attributs
 
         public static List<Employe> LsEmployes
         {
